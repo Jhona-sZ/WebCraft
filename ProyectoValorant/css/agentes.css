@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "poppins-300";
+    src: url(../assets/fuentes/Poppins-Light.ttf);
+}
+@font-face {
+    font-family: "poppins-400";
+    src: url(../assets/fuentes/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: "poppins-600";
+    src: url(../assets/fuentes/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "poppins-700";
+    src: url(../assets/fuentes/Poppins-Bold.ttf);
+}
+
+body{
+    margin: 0 auto;
+    background-image: url("./../assets/img/fondo_pag.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+/*******Contenedor*******/
+.container{
+    margin: auto;
+    width: 980px;   
+    background-color: #0f1923;
+    
+}
+/*******Menú*******/
+.header{
+    /* border: 1px solid blue; */
+    background-color:#1a1f28;  
+    margin: 10px;
+    font-variant: small-caps;
+    font-size: 1.9rem;
+    text-align: center;
+   
+}
+.header ul{
+    margin: 0px;
+}
+.header ul li{
+    list-style: none;
+    display: inline-block;
+}
+.header a{
+    text-decoration: none;
+    color:#ff4655;
+    font-family: "poppins-400";
+    padding: 10px;
+    
+}
+.header :hover{
+   color: #00aeff;
+}
+/*******Cuerpo*******/
+.cuerpo{
+    margin:10px;    
+}
+/*******Título*******/
+.title1{
+    border: 1px solid beige;
+    background-image: url("./../assets/img/fondoh1.png");
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size: contain; 
+    text-align: center;
+    font-size: 3rem;
+    font-family: "poppins-700";
+    color: #000000;
+    text-transform: uppercase;
+}
+/*******Cajas-Agentes*******/
+.cajas{
+    text-align: center;
+    
+}
+ .caja1{
+    display: inline-block;
+    padding: 5px;
+
+ }
+ .caja2{
+    padding: 5px;
+    display: inline-block;
+
+ }
+ .caja3{
+    padding: 5px;
+    display: inline-block;
+}
+
+/*******Fotos*******/
+.fotos{
+    width: 306px;
+    height:408px;
+    /* box-shadow: 1px 1px 15px #ff4655; */
+}
+/*******Texto*******/
+p{
+    margin: 10px;
+    text-align: right;
+    color:#ece8e1;
+    font-family: "poppins-300";
+    font-size: 1rem;
+    font-weight: bold;
+}
+p:hover{
+    color:red;
+}

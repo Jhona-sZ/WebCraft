@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "poppins-300";
+    src: url(../assets/fuentes/Poppins-Light.ttf);
+}
+@font-face {
+    font-family: "poppins-400";
+    src: url(../assets/fuentes/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: "poppins-600";
+    src: url(../assets/fuentes/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "poppins-700";
+    src: url(../assets/fuentes/Poppins-Bold.ttf);
+}
+
+body{
+    margin: 0 auto;
+    background-color: #0f1923;
+    background-image: url("./../assets/img/fondo_pag.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+/*******Contenedor*******/
+.container{
+    margin: auto;
+    width: 960px;
+    margin-bottom: 20px;
+    background-color: #0f1923;
+
+}
+/*******Menú*******/
+.header{
+    background-color:#1a1f28;  
+    margin: 10px;
+    font-variant: small-caps;
+    font-size: 1.9rem;
+    text-align: center;
+   
+}
+.header ul{
+    margin: 0px;
+}
+.header ul li{
+    list-style: none;
+    display: inline-block;
+}
+.header a{
+    text-decoration: none;
+    color:#ff4655;
+    font-family: "poppins-400";
+    padding: 10px;
+    
+}
+.header :hover{
+   color: #00aeff;
+}
+/*******Cuerpo*******/
+.cuerpo{
+    margin: 10px;
+}
+/* Titulo */
+.title1{
+    border: 1px solid beige;
+    background-image: url("./../assets/img/fondoh1.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain; 
+    text-align: center;
+    font-size: 3rem;
+    font-family: "poppins-700";
+    color: #000000; 
+    text-transform: uppercase;
+}
+.enlace{
+    text-decoration: none;
+    color:#ff4655;
+    font-family: "poppins-400";
+}
+/*******Subtítulo*******/
+.title2{
+    text-align: center;
+    font-size: 2rem;
+    font-family: "poppins-600";
+    color: #00aeff; /* Azul cian */
+     margin-top: 20px;
+
+}
+/*******Texto*******/
+p{
+    color:#ece8e1;
+    font-family: "poppins-300";
+    text-align: justify;
+    font-size: 1rem;
+}
+/*******Fotos*******/
+.captura{
+    border: 1px solid beige;
+    width: 900px;
+    height: 500px;
+    margin: 0 auto;
+}
+.foto1{
+    width: 100%;
+    height: 100%;
+}
+/*******Footer*******/
+.footer{
+    height: 100px;
+    background-color: #292929;  
+    text-align: center;
+    padding-top: 40px;
+
+}
+.footer a{
+    text-decoration: none;
+    color:#ece8e1;
+    font-family: "poppins-300";
+    text-align: justify;
+    font-size: 1.2rem;
+    padding: 20px;
+}
+.footer a:hover{
+    color:#ff4655;
+    text-decoration: none;
+    font-family: "poppins-400";
+}
