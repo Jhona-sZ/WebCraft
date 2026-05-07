@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión | PlayStation</title>
+    <!-- LOGO -->
+    <link rel="shortcut icon" href="../assets/images/playStation-logPag.ico" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body class="bg-black min-h-screen">
+    <!-- LÍNEA NEGRA -->
+    <section class="bg-black p-1 justify-end flex">
+        <img class="w-25 p-2" src="../assets/images/sony.svg" alt="sony">
+    </section>
+
+    <!-- MAIN -->
+    <main class="flex h-screen">
+
+        <!-- LADO IZQUIERDO -->
+        <section class="hidden md:flex w-1/2 bg-[url('../assets/images/background_dark.jpeg')] bg-cover bg-center items-center justify-center">
+            <img class="w-48 lg:w-64 cursor-pointer" src="../assets/images/logo-sv.svg" alt="logo">
+        </section>
+
+        <!-- LADO DERECHO -->
+        <section class="w-full md:w-1/2 bg-[#1a1a1a] flex flex-col justify-between px-8 md:px-16 lg:px-24 py-10">
+
+            <!-- CERRAR -->
+            <article class="flex justify-end">
+                <a href="../index.html" class="text-white text-2xl hover:text-gray-400 transition-colors cursor-pointer">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+            </article>
+
+            <!-- FORMULARIO -->
+            <article class="flex flex-col gap-6 max-w-md w-full mx-auto">
+                <h1 class="text-white text-2xl md:text-3xl font-light text-center">Iniciar sesión en PlayStation</h1>
+
+                <div class="flex flex-col gap-2">
+                    <label class="text-gray-300 text-sm text-center">ID de inicio de sesión (correo electrónico)</label>
+                    <input type="email" class="w-full bg-transparent border border-gray-500 rounded text-white px-4 py-3 focus:outline-none focus:border-white transition-colors"placeholder="Correo electrónico">
+                </div>
+
+                <button class="w-full bg-gray-500 hover:bg-gray-400 text-white font-semibold py-3 rounded-full transition-colors cursor-pointer">
+                    Siguiente
+                </button>
+
+                <div class="flex flex-col items-center gap-3">
+                    <a href="#" class="text-[#0070cc] hover:underline text-sm">Acerca de la cuenta de Sony</a>
+                    <a href="#" class="text-[#0070cc] hover:underline text-sm">¿Problemas para iniciar sesión?</a>
+                </div>
+
+                <button class="w-full bg-[#2a2a2a] hover:bg-[#3a3a3a] text-white font-semibold py-3 rounded-full border border-gray-600 transition-colors cursor-pointer">
+                    <a href="./registro.html">Crear una cuenta</a>
+                </button>
+            </article>
+
+            <!-- AYUDA -->
+            <article class="flex justify-center mt-10">
+                <a href="#" class="text-[#0070cc] hover:underline text-sm">Ayuda/Mapa del sitio</a>
+            </article>
+
+        </section>
+    </main>
+</body>
+</html>

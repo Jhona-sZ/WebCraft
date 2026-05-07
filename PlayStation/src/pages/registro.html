@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear cuenta | PlayStation</title>
+    <!-- LOGO -->
+    <link rel="shortcut icon" href="../assets/images/playStation-logPag.ico" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body class="bg-black min-h-screen">
+
+    <!-- LÍNEA NEGRA -->
+    <section class="bg-black p-1 justify-end flex">
+        <img class="w-25 p-2" src="../assets/images/sony.svg" alt="sony">
+    </section>
+
+    <!-- MAIN -->
+    <main class="flex h-screen">
+
+        <!-- LADO IZQUIERDO -->
+        <section class="hidden md:flex w-1/2 relative bg-[url('../assets/images/background_dark.jpeg')] bg-cover bg-center items-center justify-center">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="relative z-10 flex flex-col items-center gap-6 text-center px-10">
+                <img class="w-48 lg:w-64 cursor-pointer" src="../assets/images/logo-sv.svg" alt="logo">
+                <h2 class="text-white text-2xl lg:text-3xl font-light">Bienvenido a PlayStation</h2>
+                <p class="text-gray-300 text-sm lg:text-base">Crea tu cuenta y accede a juegos increíbles, PlayStation Plus, PS Store y mucho más.</p>
+            </div>
+        </section>
+
+        <!-- LADO DERECHO -->
+        <section class="w-full md:w-1/2 bg-[#1a1a1a] flex flex-col justify-between px-8 md:px-12 lg:px-20 py-8 relative overflow-y-auto">
+
+            <!-- CERRAR -->
+            <article class="flex justify-end">
+                <a href="../index.html" class="text-white text-2xl hover:text-gray-400 transition-colors cursor-pointer">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+            </article>
+
+            <!-- FORMULARIO -->
+            <article class="flex flex-col gap-5 max-w-md w-full mx-auto py-4">
+                <h1 class="text-white text-2xl md:text-3xl font-light text-center">Crear una cuenta</h1>
+                <p class="text-gray-400 text-sm text-center">Completa los siguientes datos para registrarte</p>
+
+                <!-- NOMBRE Y APELLIDOS -->
+                <div class="flex gap-3">
+                    <div class="flex flex-col gap-1 w-1/2">
+                        <label class="text-gray-300 text-xs">Nombre</label>
+                        <input type="text" class="w-full bg-transparent border border-gray-500 rounded text-white px-4 py-3 focus:outline-none focus:border-white transition-colors text-sm" placeholder="Nombre">
+                    </div>
+                    <div class="flex flex-col gap-1 w-1/2">
+                        <label class="text-gray-300 text-xs">Apellidos</label>
+                        <input type="text" class="w-full bg-transparent border border-gray-500 rounded text-white px-4 py-3 focus:outline-none focus:border-white transition-colors text-sm" placeholder="Apellidos">
+                    </div>
+                </div>
+
+                <!-- CORREO -->
+                <div class="flex flex-col gap-1">
+                    <label class="text-gray-300 text-xs">ID de inicio de sesión (correo electrónico)</label>
+                    <input type="email" class="w-full bg-transparent border border-gray-500 rounded text-white px-4 py-3 focus:outline-none focus:border-white transition-colors text-sm" placeholder="correo@ejemplo.com">
+                </div>
+
+                <!-- CONTRASEÑA -->
+                <div class="flex flex-col gap-1">
+                    <label class="text-gray-300 text-xs">Contraseña</label>
+                    <input type="password" class="w-full bg-transparent border border-gray-500 rounded text-white px-4 py-3 focus:outline-none focus:border-white transition-colors text-sm" placeholder="Mínimo 8 caracteres">
+                </div>
+
+                <!-- CONFIRMAR CONTRASEÑA -->
+                <div class="flex flex-col gap-1">
+                    <label class="text-gray-300 text-xs">Confirmar contraseña</label>
+                    <input type="password" class="w-full bg-transparent border border-gray-500 rounded text-white px-4 py-3 focus:outline-none focus:border-white transition-colors text-sm" placeholder="Repite tu contraseña">
+                </div>
+
+                <!-- FECHA DE NACIMIENTO -->
+                <div class="flex flex-col gap-1">
+                    <label class="text-gray-300 text-xs">Fecha de nacimiento</label>
+                    <input type="date" class="w-full bg-transparent border border-gray-500 rounded text-gray-300 px-4 py-3 focus:outline-none focus:border-white transition-colors text-sm">
+                </div>
+
+                <!-- PAÍS -->
+                <div class="flex flex-col gap-1">
+                    <label class="text-gray-300 text-xs">País / Región</label>
+                    <select class="w-full bg-[#1a1a1a] border border-gray-500 rounded text-gray-300 px-4 py-3 focus:outline-none focus:border-white transition-colors text-sm cursor-pointer">
+                        <option value="">Selecciona tu país</option>
+                        <option value="es">España</option>
+                        <option value="mx">México</option>
+                        <option value="ar">Argentina</option>
+                        <option value="co">Colombia</option>
+                        <option value="cl">Chile</option>
+                        <option value="pe">Perú</option>
+                        <option value="us">Estados Unidos</option>
+                    </select>
+                </div>
+
+                <!-- CHECKBOX -->
+                <div class="flex flex-col gap-2">
+                    <label class="flex items-start gap-2 cursor-pointer">
+                        <input type="checkbox" class="mt-1 cursor-pointer w-4 h-4 border border-gray-500 rounded bg-transparent">
+                        <span class="text-gray-400 text-xs">Acepto los <a href="#" class="text-[#0070cc] hover:underline">Términos de uso</a> y la <a href="#" class="text-[#0070cc] hover:underline">Política de privacidad</a> de Sony.</span>
+                    </label>
+                    <label class="flex items-start gap-2 cursor-pointer">
+                        <input type="checkbox" class="mt-1 cursor-pointer w-4 h-4 border border-gray-500 rounded bg-transparent">
+                        <span class="text-gray-400 text-xs">Quiero recibir novedades, ofertas y noticias de PlayStation por correo electrónico.</span>
+                    </label>
+                </div>
+
+                <!-- BOTÓN REGISTRAR -->
+                <button class="w-full bg-[#0070cc] hover:bg-[#0162b1] text-white font-semibold py-3 rounded-full transition-colors cursor-pointer">
+                   <a href="../index.html">Crear cuenta</a>
+                </button>
+
+                <!-- YA TIENES CUENTA -->
+                <div class="flex items-center justify-center gap-2 text-sm">
+                    <span class="text-gray-400">¿Ya tienes cuenta?</span>
+                    <a href="./sesion.html" class="text-[#0070cc] hover:underline">Iniciar sesión</a>
+                </div>
+
+            </article>
+
+            <!-- AYUDA -->
+            <article class="flex justify-center mt-4">
+                <a href="#" class="text-[#0070cc] hover:underline text-sm">Ayuda/Mapa del sitio</a>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

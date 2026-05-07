@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página oficial de PlayStation®: Consolas, juegos, accesorios y más...</title>
+    <!-- LOGO -->
+    <link rel="shortcut icon" href="./assets/images/playStation-logPag.ico" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- LÍNEA NEGRA -->
+    <section class="bg-black p-1 justify-end hidden md:flex">
+        <img class="w-25 p-2" src="./assets/images/sony.svg" alt="sony">
+    </section>
+
+    <!-- HEADER -->
+    <header class="flex items-center justify-between py-3 md:py-4 px-2 lg:px-8 top-0 sticky bg-white z-100">
+        <!-- HEADER-IZQUIERDA -->
+        <section class="flex items-center gap-9">
+            <!-- Hamburguesa-->
+            <button id="menu-btn" class="md:hidden text-xl cursor-pointer">
+                <i id="menu-icon" class="fa-solid fa-bars"></i>
+            </button>
+            <!-- Lupa -->
+            <a href="#" class="md:hidden">
+                <i class="text-xl fa-brands fa-sistrix"></i>
+            </a>
+            <!-- Logo izquierda -->
+            <a href="./index.html" class="hidden md:block">
+                <img class="w-10" src="./assets/images/ps-logo.jpg" alt="logo">
+            </a>
+            <!-- MENÚ DESKTOP -->
+            <nav class="hidden md:block">
+                <ul class="flex gap-3 lg:gap-4 xl:gap-7">
+                    <li class="group flex items-center gap-1 cursor-pointer">
+                        <a href="#" class="text-[10.5px] lg:text-[12.5px] xl:text-[16px] text-gray-800 font-bold hover:text-[#0070cc]">Juegos</a>
+                        <i class="text-[10.5px] lg:text-[12.5px] xl:text-[16px] text-gray-400 fa-solid fa-angle-down group-hover:text-[#0070cc]"></i>
+                    </li>
+                    <li class="group flex items-center gap-1 cursor-pointer">
+                        <a href="#" class="text-[10.5px] lg:text-[12.5px] xl:text-[16px] text-gray-800 font-bold group-hover:text-[#0070cc]">PS5</a>
+                        <i class="text-[10.5px] lg:text-[12.5px] xl:text-[16px] text-gray-400 fa-solid fa-angle-down group-hover:text-[#0070cc]"></i>
+                    </li>
+                    <li class="group flex items-center gap-1 cursor-pointer">
+                        <a href="#" class="text-[10.5px] lg:text-[12.5px] xl:text-[16px] text-gray-800 font-bold group-hover:text-[#0070cc]">PS4</a>
+                        <i class="text-[10.5px] lg:text-[12.5px] xl:text-[16px] text-gray-400 fa-solid fa-angle-down group-hover:text-[#0070cc]"></i>
+                    </li>
+                    <li class="group flex items-center gap-1 cursor-pointer">
+                        <a href="#" class="text-[10.5px] lg:text-[12.5px] xl:text-[16px] text-gray-800 font-bold group-hover:text-[#0070cc]">PS PLUS</a>
+                        <i class="text-[10.5px] lg:text-[12.5px] xl:text-[16px] text-gray-400 fa-solid fa-angle-down group-hover:text-[#0070cc]"></i>
+                    </li>
+                    <li class="group flex items-center gap-1 cursor-pointer">
+                        <a href="#" class="text-[10.5px] lg:text-[12.5px] xl:text-[16px] text-gray-800 font-bold group-hover:text-[#0070cc]">Accesorios</a>
+                        <i class="text-[10.5px] lg:text-[12.5px] xl:text-[16px] text-gray-400 fa-solid fa-angle-down group-hover:text-[#0070cc]"></i>
+                    </li>
+                    <li class="group flex items-center gap-1 cursor-pointer">
+                        <a href="#" class="text-[10.5px] lg:text-[12.5px] xl:text-[16px] text-gray-800 font-bold group-hover:text-[#0070cc]">Noticias</a>
+                        <i class="text-[10.5px] lg:text-[12.5px] xl:text-[16px] text-gray-400 fa-solid fa-angle-down group-hover:text-[#0070cc]"></i>
+                    </li>
+                    <li class="group flex items-center gap-1 cursor-pointer">
+                        <a href="#" class="text-[10.5px] lg:text-[12.5px] xl:text-[16px] text-gray-800 font-bold group-hover:text-[#0070cc]">Tienda</a>
+                        <i class="text-[10.5px] lg:text-[12.5px] xl:text-[16px] text-gray-400 fa-solid fa-angle-down group-hover:text-[#0070cc]"></i>
+                    </li>
+                    <li class="group flex items-center gap-1 cursor-pointer">
+                        <a href="#" class="text-[10.5px] lg:text-[12.5px] xl:text-[16px] text-gray-800 font-bold group-hover:text-[#0070cc]">Asistencia</a>
+                        <i class="text-[10.5px] lg:text-[12.5px] xl:text-[16px] text-gray-400 fa-solid fa-angle-down group-hover:text-[#0070cc]"></i>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <!-- Logo centrado-->
+        <a href="./index.html" class="md:hidden">
+            <img class="w-9" src="./assets/images/ps-logo.jpg" alt="logo">
+        </a>
+
+        <!-- HEADER-DERECHA -->
+        <section class="flex items-center gap-2 md:gap-3">
+            <button class="text-[12.5px] lg:text-[14px] xl:text-[16px] bg-[#0070cc] text-white font-bold py-1 px-2 lg:px-3 rounded-full cursor-pointer hover:bg-[#0162b1]">
+                <a href="./pages/sesion.html">Iniciar sesión</a>
+            </button>
+            <!-- Lupa -->
+            <a href="#" class="hidden md:block">
+                <i class="text-xl lg:text-2xl fa-brands fa-sistrix"></i>
+            </a>
+        </section>
+    </header>
+
+    <!-- MENÚ MÓVIL -->
+    <section id="mobile-menu" class="hidden md:hidden sticky top-14 bg-white z-50 shadow-md py-4">
+        <ul class="flex flex-col gap-4 px-8">
+            <li class="group flex items-center justify-between cursor-pointer border-b pb-3 hover:bg-gray-100">
+                <a href="#" class="text-sm text-gray-800 font-bold group-hover:text-[#0070cc]">Juegos</a>
+                <i class="text-sm text-gray-400 fa-solid fa-angle-right group-hover:text-[#0070cc]"></i>
+            </li>
+            <li class="group flex items-center justify-between cursor-pointer border-b pb-3 hover:bg-gray-100">
+                <a href="#" class="text-sm text-gray-800 font-bold group-hover:text-[#0070cc]">PS5</a>
+                <i class="text-sm text-gray-400 fa-solid fa-angle-right group-hover:text-[#0070cc]"></i>
+            </li>
+            <li class="group flex items-center justify-between cursor-pointer border-b pb-3 hover:bg-gray-100">
+                <a href="#" class="text-sm text-gray-800 font-bold group-hover:text-[#0070cc]">PS4</a>
+                <i class="text-sm text-gray-400 fa-solid fa-angle-right group-hover:text-[#0070cc]"></i>
+            </li>
+            <li class="group flex items-center justify-between cursor-pointer border-b pb-3 hover:bg-gray-100">
+                <a href="#" class="text-sm text-gray-800 font-bold group-hover:text-[#0070cc]">PS PLUS</a>
+                <i class="text-sm text-gray-400 fa-solid fa-angle-right group-hover:text-[#0070cc]"></i>
+            </li>
+            <li class="group flex items-center justify-between cursor-pointer border-b pb-3 hover:bg-gray-100">
+                <a href="#" class="text-sm text-gray-800 font-bold group-hover:text-[#0070cc]">Accesorios</a>
+                <i class="text-sm text-gray-400 fa-solid fa-angle-right group-hover:text-[#0070cc]"></i>
+            </li>
+            <li class="group flex items-center justify-between cursor-pointer border-b pb-3 hover:bg-gray-100">
+                <a href="#" class="text-sm text-gray-800 font-bold group-hover:text-[#0070cc]">Noticias</a>
+                <i class="text-sm text-gray-400 fa-solid fa-angle-right group-hover:text-[#0070cc]"></i>
+            </li>
+            <li class="group flex items-center justify-between cursor-pointer border-b pb-3 hover:bg-gray-100">
+                <a href="#" class="text-sm text-gray-800 font-bold group-hover:text-[#0070cc]">Tienda</a>
+                <i class="text-sm text-gray-400 fa-solid fa-angle-right group-hover:text-[#0070cc]"></i>
+            </li>
+            <li class="group flex items-center justify-between cursor-pointer hover:bg-gray-100">
+                <a href="#" class="text-sm text-gray-800 font-bold group-hover:text-[#0070cc]">Asistencia</a>
+                <i class="text-sm text-gray-400 fa-solid fa-angle-right group-hover:text-[#0070cc]"></i>
+            </li>
+        </ul>
+    </section>
+
+    <!-- BANNER -->
+    <section class="relative bg-[url('../assets/images/Resident-Evil-Requiem-hero.jpg')] bg-cover bg-center h-screen w-full">
+        <article class="absolute inset-0 flex flex-col items-center justify-center text-center gap-4 md:items-start md:text-left md:justify-end md:gap-6 md:bottom-[20%] md:left-[7%] md:w-[50%] lg:w-[35%] px-6 md:px-0 pb-10 md:pb-0">
+            <img class="w-72 sm:w-90 md:w-120" src="./assets/images/Resident-Evil-Requiem-Red-Logo-01.webp" alt="Resident Evil Requiem">
+            <p class="text-sm sm:text-base md:w-full md:text-lg lg:text-xl text-gray-900">
+                Adéntrate en una nueva era de survival horror mientras Grace y Leon enfrentan una aterradora amenaza.
+            </p>
+            <!-- BUTTON -->
+            <div class="w-fit rounded-full border-2 border-transparent hover:border-[#D53B00] transition-all">
+                <button class="m-px text-[11px] md:text-[12px] lg:text-[16px] xl:text-[20px] py-2 md:py-2.5 px-4 md:px-5 bg-[#D53B00] text-white rounded-full font-bold border-2 border-transparent transition-all">
+                    Comprar ahora
+                </button>
+            </div>
+        </article>
+    </section>
+
+    <!-- MAIN -->
+    <main class="py-6 md:py-8 w-full">
+
+        <!-- CARRUSEL-1 -->
+        <section class="py-[21px] w-full">
+            <div class="container mx-auto px-6 md:px-[42px]">
+                <article class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
+                    <!-- IMG-1 -->
+                    <div class="border-3 border-blue-500 shadow-lg rounded-xl overflow-hidden cursor-pointer transition-transform duration-200 hover:-translate-y-3">
+                        <img class="w-full h-auto" src="./assets/images/marathon-keyart.jpg" alt="marathon">
+                    </div>
+                    <!-- IMG-2 -->
+                    <div class="shadow-xl rounded-xl overflow-hidden cursor-pointer transition-transform duration-200 hover:-translate-y-3">
+                        <img class="w-full h-auto" src="./assets/images/ghost-of-yotei-legend.jpg" alt="ghost">
+                    </div>
+                    <!-- IMG-3 -->
+                    <div class="shadow-xl rounded-xl overflow-hidden cursor-pointer transition-transform duration-200 hover:-translate-y-3">
+                        <img class="w-full h-auto" src="./assets/images/HyperPop-Collection-dualsense.jpg" alt="kena">
+                    </div>
+                    <!-- IMG-4 -->
+                    <div class="shadow-xl rounded-xl overflow-hidden cursor-pointer transition-transform duration-200 hover:-translate-y-3">
+                        <img class="w-full h-auto" src="./assets/images/marathon-dualsense-controller.jpg" alt="genshin">
+                    </div>
+                    <!-- IMG-5 -->
+                    <div class="shadow-xl rounded-xl overflow-hidden cursor-pointer transition-transform duration-200 hover:-translate-y-3">
+                        <img class="w-full h-auto" src="./assets/images/Resident-Evil-Requiem-keyart-02.jpg" alt="resident evil">
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ACCESORIOS -->
+        <section class="mt-10 py-[21px] w-full">
+            <div class="container mx-auto px-6 md:px-[42px] flex flex-col md:flex-row items-center justify-between gap-8">
+                <!-- ACCESORIOS-IZQ -->
+                <article class="w-full md:max-w-120">
+                    <div class="w-full max-w-xs sm:max-w-sm mx-auto md:max-w-full md:mx-0">
+                        <h2 class="text-center text-2xl sm:text-3xl md:text-[36px] md:text-left xl:text-[50px] mb-4 font-normal text-[#000000]">
+                            Descubre todas las consolas y accesorios para PS5
+                        </h2>
+                    </div>
+                    <h3 class="text-center text-base sm:text-lg md:text-[22px] xl:text-[30px] md:text-left text-[#0068BD] mb-2">Consola PlayStation 5</h3>
+                    <p class="text-center text-[11px] sm:text-[12px] md:text-[14px] lg:text-[16px] text-[#6B6B6B] mb-4 md:text-left">Descubre una nueva generación de juegos increíbles para PlayStation.</p>
+                    <!-- BUTTONS -->
+                    <div class="flex flex-wrap items-center gap-3 justify-center md:justify-start">
+                        <div class="rounded-full border-2 border-transparent hover:border-[#0070cc] transition-all">
+                            <button class="m-px text-[11px] md:text-[12px] lg:text-[16px] xl:text-[20px] py-2 md:py-2.5 px-4 md:px-5 bg-[#0070cc] text-white rounded-full font-bold">
+                                Obtén más información
+                            </button>
+                        </div>
+                        <div class="rounded-full border-2 border-transparent hover:border-[#D53B00] transition-all">
+                            <button class="m-px text-[11px] md:text-[12px] lg:text-[16px] xl:text-[20px] py-2 md:py-2.5 px-4 md:px-5 bg-[#D53B00] text-white rounded-full font-bold border-2 border-transparent transition-all">
+                                Comprar ahora
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <!-- IMG PS5 -->
+                <article class="hidden md:block md:max-w-[1400px]">
+                    <img class="cursor-pointer w-full h-auto" src="./assets/images/ps5-slim-disc-console.jpg" alt="ps5-slim">
+                </article>
+            </div>
+        </section>
+
+        <!-- CARRUSEL-2 -->
+        <section class="py-[21px] mt-8 w-full">
+            <div class="container mx-auto px-6 md:px-[42px]">
+                <article class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-5">
+                    <!-- PS5-SLIM -->
+                    <div class="flex flex-col items-center">
+                        <div class="items-center border-3 border-blue-500 rounded-xl overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105">
+                            <img class="w-full h-auto p-1 rounded-xl" src="./assets/images/ps5-slim-disc-console.jpg" alt="consola">
+                        </div>
+                        <p class="text-center mt-3 text-[#0068BD]">Consola PS5</p>
+                    </div>
+                    <!-- PS5-PRO -->
+                    <div class="flex flex-col items-center">
+                        <div class="shadow-lg rounded-xl overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105">
+                            <img class="w-full h-auto p-1 rounded-xl" src="./assets/images/ps5-pro-dualsense.jpg" alt="ps5-pro">
+                        </div>
+                        <p class="text-center mt-3 text-[#6B6B6B]">Consola PS5 Pro</p>
+                    </div>
+                    <!-- DUALSENSE -->
+                    <div class="flex flex-col items-center">
+                        <div class="shadow-lg rounded-xl overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105">
+                            <img class="w-full h-auto p-1 rounded-xl" src="./assets/images/dualsense-range.jpg" alt="dualsense">
+                        </div>
+                        <p class="text-center mt-3 text-[#6B6B6B]">Mando inalámbrico DualSense™</p>
+                    </div>
+                    <!-- PS-PORTATIL -->
+                    <div class="flex flex-col items-center">
+                        <div class="shadow-lg rounded-xl overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105">
+                            <img class="w-full h-auto p-1 rounded-xl" src="./assets/images/playstation-portal.jpg" alt="portal">
+                        </div>
+                        <p class="text-center mt-3 text-[#6B6B6B]">Reproductor portátil PlayStation Portal™</p>
+                    </div>
+                    <!-- AURICULARES -->
+                    <div class="flex flex-col items-center">
+                        <div class="shadow-lg rounded-xl overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105">
+                            <img class="w-full h-auto p-1 rounded-xl" src="./assets/images/PULSE-Elite.jpg" alt="auriculares">
+                        </div>
+                        <p class="text-center mt-3 text-[#6B6B6B]">Auriculares Inalámbricos PULSE Elite™</p>
+                    </div>
+                    <!-- AURICULARES-2 -->
+                    <div class="flex flex-col items-center">
+                        <div class="shadow-lg rounded-xl overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105">
+                            <img class="w-full h-auto p-1 rounded-xl" src="./assets/images/PULSE-Explore.jpg" alt="auriculares2">
+                        </div>
+                        <p class="text-center mt-3 text-[#6B6B6B]">Auriculares Inalámbricos PULSE Explore™</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- JUEGOS -->
+    <section class="bg-[#121314] py-10 w-full">
+        <div class="container mx-auto px-6 md:px-[42px]">
+            <h2 class="pt-[21px] text-center text-white text-2xl md:text-3xl xl:text-4xl mb-6">
+                Juegos increíbles de PS4 y PS5 que ya han salido o vendrán pronto
+            </h2>
+            <article class="flex items-center rounded-full bg-[#1E1E1F] w-fit mx-auto p-1 mb-8 top-[70px] sticky z-10">
+                <button class="bg-white text-black text-sm md:text-base font-semibold py-2 px-5 rounded-full cursor-pointer">Nuevos lanzamientos</button>
+                <p class="text-white text-sm md:text-base font-semibold px-4 cursor-pointer hover:text-[#2ca0ff] transition-colors">Próximamente</p>
+            </article>
+
+            <!-- CARDS -->
+            <article class="my-[27px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-5">
+
+                <!-- ARC RAIDERS -->
+                <div class="flex flex-col cursor-pointer w-full">
+                    <div class="relative rounded-xl overflow-hidden w-full h-48 sm:h-56 md:h-64 transition-transform duration-300 hover:scale-105">
+                        <img class="w-full h-full object-cover" src="./assets/images/Arc-Raiders.jpg" alt="arc">
+                        <div class="absolute bottom-2 left-2 flex gap-1">
+                            <img src="./assets/images/ps5.svg" alt="ps5" class="w-10 sm:w-8 md:w-10 xl:w-12">
+                        </div>
+                    </div>
+                    <p class="text-white text-xs sm:text-sm mt-2">ARC Raiders</p>
+                </div>
+
+                <!-- ASTRO BOT -->
+                <div class="flex flex-col cursor-pointer group w-full">
+                    <div class="relative rounded-xl overflow-hidden w-full h-48 sm:h-56 md:h-64 transition-transform duration-300 hover:scale-105">
+                        <img class="w-full h-full object-cover" src="./assets/images/astro-bot.jpg" alt="astro-bot">
+                        <div class="absolute bottom-2 left-2 flex gap-1">
+                            <img src="./assets/images/ps5.svg" alt="ps5" class="w-10 sm:w-8 md:w-10 xl:w-12">
+                        </div>
+                    </div>
+                    <p class="text-white text-xs sm:text-sm mt-2">ASTRO BOT</p>
+                </div>
+
+                <!-- BATTLEFIELD 6 -->
+                <div class="flex flex-col cursor-pointer group w-full">
+                    <div class="relative rounded-xl overflow-hidden w-full h-48 sm:h-56 md:h-64 transition-transform duration-300 hover:scale-105">
+                        <img class="w-full h-full object-cover" src="./assets/images/battlefiel.jpeg" alt="battlefield">
+                        <div class="absolute bottom-2 left-2 flex gap-1">
+                            <img src="./assets/images/ps5.svg" alt="ps5" class="w-10 sm:w-8 md:w-10 xl:w-12">
+                        </div>
+                    </div>
+                    <p class="text-white text-xs sm:text-sm mt-2">Battlefield 6</p>
+                </div>
+
+                <!-- CALL OF DUTY -->
+                <div class="flex flex-col cursor-pointer group w-full">
+                    <div class="relative rounded-xl overflow-hidden w-full h-48 sm:h-56 md:h-64 transition-transform duration-300 hover:scale-105">
+                        <img class="w-full h-full object-cover" src="./assets/images/Call-of-duty.jpg" alt="call-of-duty">
+                        <div class="absolute bottom-2 left-2 flex gap-1">
+                            <img src="./assets/images/ps5-ps4.svg" alt="ps5-ps4" class="w-14 sm:w-12 md:w-14 xl:w-18">
+                        </div>
+                    </div>
+                    <p class="text-white text-xs sm:text-sm mt-2">Call of Duty®: Black Ops 7</p>
+                </div>
+
+                <!-- DEATH STRANDING -->
+                <div class="flex flex-col cursor-pointer group w-full">
+                    <div class="relative rounded-xl overflow-hidden w-full h-48 sm:h-56 md:h-64 transition-transform duration-300 hover:scale-105">
+                        <img class="w-full h-full object-cover" src="./assets/images/death-stranding-2.jpg" alt="death-stranding">
+                        <div class="absolute bottom-2 left-2 flex gap-1">
+                            <img src="./assets/images/ps5.svg" alt="ps5" class="w-10 sm:w-8 md:w-10 xl:w-12">
+                        </div>
+                    </div>
+                    <p class="text-white text-xs sm:text-sm mt-2">Death Stranding 2: On the Beach</p>
+                </div>
+
+                <!-- FC 26 -->
+                <div class="flex flex-col cursor-pointer group w-full">
+                    <div class="relative rounded-xl overflow-hidden w-full h-48 sm:h-56 md:h-64 transition-transform duration-300 hover:scale-105">
+                        <img class="w-full h-full object-cover" src="./assets/images/fc26.jpg" alt="fc26">
+                        <div class="absolute bottom-2 left-2 flex gap-1">
+                            <img src="./assets/images/ps5-ps4.svg" alt="ps5-ps4" class="w-14 sm:w-12 md:w-14 xl:w-18">
+                        </div>
+                    </div>
+                    <p class="text-white text-xs sm:text-sm mt-2">EA SPORTS FC™ 26</p>
+                </div>
+
+                <!-- FORZA HORIZON 5 -->
+                <div class="flex flex-col cursor-pointer group w-full">
+                    <div class="relative rounded-xl overflow-hidden w-full h-48 sm:h-56 md:h-64 transition-transform duration-300 hover:scale-105">
+                        <img class="w-full h-full object-cover" src="./assets/images/horizon-5.jpg" alt="forza">
+                        <div class="absolute bottom-2 left-2 flex gap-1">
+                            <img src="./assets/images/ps5.svg" alt="ps5" class="w-10 sm:w-8 md:w-10 xl:w-12">
+                        </div>
+                    </div>
+                    <p class="text-white text-xs sm:text-sm mt-2">Forza Horizon 5</p>
+                </div>
+
+                <!-- GHOST OF YOTEI -->
+                <div class="flex flex-col cursor-pointer group w-full">
+                    <div class="relative rounded-xl overflow-hidden w-full h-48 sm:h-56 md:h-64 transition-transform duration-300 hover:scale-105">
+                        <img class="w-full h-full object-cover" src="./assets/images/Ghost-of-Yotei-Keyart.jpeg" alt="ghost">
+                        <div class="absolute bottom-2 left-2 flex gap-1">
+                            <img src="./assets/images/ps5.svg" alt="ps5" class="w-10 sm:w-8 md:w-10 xl:w-12">
+                        </div>
+                    </div>
+                    <p class="text-white text-xs sm:text-sm mt-2">Ghost of Yōtei</p>
+                </div>
+
+                <!-- HELLDIVERS 2 -->
+                <div class="flex flex-col cursor-pointer group w-full">
+                    <div class="relative rounded-xl overflow-hidden w-full h-48 sm:h-56 md:h-64 transition-transform duration-300 hover:scale-105">
+                        <img class="w-full h-full object-cover" src="./assets/images/helldivers-2.jpg" alt="helldivers">
+                        <div class="absolute bottom-2 left-2 flex gap-1">
+                            <img src="./assets/images/ps5.svg" alt="ps5" class="w-10 sm:w-8 md:w-10 xl:w-12">
+                        </div>
+                    </div>
+                    <p class="text-white text-xs sm:text-sm mt-2">Helldivers™ 2</p>
+                </div>
+
+                <!-- MARATHON -->
+                <div class="flex flex-col cursor-pointer group w-full">
+                    <div class="relative rounded-xl overflow-hidden w-full h-48 sm:h-56 md:h-64 transition-transform duration-300 hover:scale-105">
+                        <img class="w-full h-full object-cover" src="./assets/images/marathon-packshot-01.jpg" alt="marathon">
+                        <div class="absolute bottom-2 left-2 flex gap-1">
+                            <img src="./assets/images/ps5.svg" alt="ps5" class="w-10 sm:w-8 md:w-10 xl:w-12">
+                        </div>
+                    </div>
+                    <p class="text-white text-xs sm:text-sm mt-2">Marathon</p>
+                </div>
+
+                <!-- NBA 2K26 -->
+                <div class="flex flex-col cursor-pointer group w-full">
+                    <div class="relative rounded-xl overflow-hidden w-full h-48 sm:h-56 md:h-64 transition-transform duration-300 hover:scale-105">
+                        <img class="w-full h-full object-cover" src="./assets/images/nba.jpg" alt="nba">
+                        <div class="absolute bottom-2 left-2 flex gap-1">
+                            <img src="./assets/images/ps5.svg" alt="ps5" class="w-10 sm:w-8 md:w-10 xl:w-12">
+                        </div>
+                    </div>
+                    <p class="text-white text-xs sm:text-sm mt-2">NBA 2K26</p>
+                </div>
+
+                <!-- RESIDENT EVIL REQUIEM -->
+                <div class="flex flex-col cursor-pointer group w-full">
+                    <div class="relative rounded-xl overflow-hidden w-full h-48 sm:h-56 md:h-64 transition-transform duration-300 hover:scale-105">
+                        <img class="w-full h-full object-cover" src="./assets/images/requiem.jpg" alt="requiem">
+                        <div class="absolute bottom-2 left-2 flex gap-1">
+                            <img src="./assets/images/ps5.svg" alt="ps5" class="w-10 sm:w-8 md:w-10 xl:w-12">
+                        </div>
+                    </div>
+                    <p class="text-white text-xs sm:text-sm mt-2">Resident Evil Requiem</p>
+                </div>
+
+            </article>
+        </div>
+    </section>
+
+    <!-- PLUS -->
+    <section class="bg-[url('../assets/images/play-ps-plus.jpg')] bg-cover bg-center py-12 w-full">
+
+            <!-- HEADER -->
+            <article class="flex flex-col items-center text-center gap-4 px-4 mb-10">
+                <img class="w-40 md:w-82" src="./assets/images/Plus.svg" alt="plus">
+                <h2 class="text-xl md:text-5xl font-light">Descubre PlayStation Plus</h2>
+                <p class="text-gray-600 text-xs md:text-lg text-justify">
+                    Juega a cientos de juegos increíbles de PS5, PS4 y clásicos de PlayStation, y descubre aventuras épicas, indies únicos, los favoritos de la familia y mucho más.
+                </p>
+            </article>
+
+            <!-- CARDS -->
+            <article class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+
+                <!-- ESSENTIAL -->
+                <div class="rounded-2xl relative overflow-hidden cursor-pointer hover:shadow-xl transition-shadow h-80">
+                    <img class="w-full h-full object-cover" src="./assets/images/ps-plus-essential-image.jpg" alt="plus-essential">
+                    <div class="absolute inset-0 bg-black/40"></div>
+                    <div class="absolute bottom-6 left-6 flex flex-col gap-2 items-start">
+                        <img class="w-55" src="./assets/images/imgi_153_ps-plus-esstential-plan-badge-01-12may22$en.svg" alt="essential-badge">
+                        <h3 class="text-white text-2xl">PlayStation Plus Essential</h3>
+                        <p class="text-gray-300 text-sm text-justify max-w-100">
+                            Nuevos juegos para jugar todos los meses, multijugador online, descuentos exclusivos de PS Store y más, disponible con los tres planes de suscripción de PlayStation Plus.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- PREMIUM -->
+                <div class="rounded-2xl relative overflow-hidden cursor-pointer hover:shadow-xl transition-shadow h-80">
+                    <img class="w-full h-full object-cover" src="./assets/images/plus-premium.jpg" alt="plus-premium">
+                    <div class="absolute inset-0 bg-black/40"></div>
+                    <div class="absolute bottom-6 left-6 flex flex-col gap-2 items-start">
+                        <img class="w-55" src="./assets/images/imgi_139_ps-plus-premium-plan-badge-01-12may22$en.svg" alt="premium-badge">
+                        <h3 class="text-white text-2xl">PlayStation Plus Premium</h3>
+                        <p class="text-gray-300 text-sm text-justify max-w-100">
+                            Disfruta de todas las ventajas de las suscripciones Extra y Essential de PlayStation Plus, las cuales incluyen pruebas de juegos, juego en la nube y el Catálogo de clásicos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- EXTRA -->
+                <div class="rounded-2xl relative overflow-hidden cursor-pointer hover:shadow-xl transition-shadow h-80">
+                    <img class="w-full h-full object-cover" src="./assets/images/ps-plus-extra-image.jpg" alt="plus-extra">
+                    <div class="absolute inset-0 bg-black/40"></div>
+                    <div class="absolute bottom-6 left-6 flex flex-col gap-2 items-start">
+                        <img class="w-55" src="./assets/images/imgi_146_ps-plus-extra-plan-badge-01-12may22$en.svg" alt="extra-badge">
+                        <h3 class="text-white text-2xl">PlayStation Plus Extra</h3>
+                        <p class="text-gray-300 text-sm text-justify max-w-100">
+                            Además de todas las ventajas del plan PlayStation Plus Essential, podrás descargar y jugar a cientos de títulos de PS4 y PS5 desde el catálogo de juegos.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- BUTTON -->
+            <article class="mx-auto mt-7 w-fit rounded-full border-2 border-transparent hover:border-[#0070cc] transition-all">
+                <button class="m-px text-[11px] md:text-[12px] lg:text-[16px] xl:text-[20px] py-2 md:py-2.5 px-4 md:px-5 bg-[#0070cc] text-white rounded-full font-bold">
+                    Descubre PlayStation
+                </button>
+            </article>
+    </section>
+
+    <!-- ANNIVERSARY -->
+    <section class="bg-[url('../assets/images/30th-anniversary-hub-background.jpg')] bg-cover bg-center w-full py-20">
+        <div class="container mx-auto px-6 md:px-16 flex flex-col lg:flex-row items-center justify-center lg:justify-around gap-2 sm:gap-4 py-8 lg:py-16">
+
+            <!-- IMG 30th -->
+            <article class="flex justify-center w-full lg:w-1/2 lg:order-2">
+                <img class="w-36 sm:w-46 md:w-52 lg:w-80 xl:w-96 h-auto" src="./assets/images/30th-anniversary-logo-01.jpg" alt="30">
+            </article>
+
+            <!-- TEXT -->
+            <article class="flex flex-col gap-1 sm:gap-2 lg:gap-3 w-full lg:w-1/2 text-center lg:text-left items-center lg:items-start lg:order-1">
+                <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl font-light text-black">30 años de PlayStation</h2>
+                <p class="w-full text-gray-500 text-md lg:text-[17px] text-justify">
+                    Únete a nosotros para celebrar 30 años de PlayStation con una serie de eventos especiales y un repaso a las consolas, los juegos y los mejores momentos que han dado vida a nuestra forma de jugar.
+                </p>
+                <!-- BUTTONS -->
+                <div class="flex flex-col md:flex-row flex-wrap items-center gap-2 lg:gap-3 justify-center lg:justify-start">
+                    <div class="rounded-full border-2 border-transparent hover:border-[#0070cc] transition-all">
+                        <button class="m-px text-md py-1 sm:py-1.5 lg:py-2 px-2 sm:px-3 lg:px-5 bg-[#0070cc] text-white rounded-full font-bold">
+                            Únete a la celebración
+                        </button>
+                    </div>
+                    <div class="rounded-full border-2 border-transparent hover:border-[#0070cc] transition-all">
+                        <button class="m-px text-md py-1 sm:py-1.5 lg:py-2 px-2 sm:px-3 lg:px-5 bg-[#0070cc] text-white rounded-full font-bold">
+                            Explora nuestra historia
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- MARCH -->
+    <section class="w-full">
+        <!-- PARTE SUPERIOR -->
+        <article class="bg-[url('../assets/images/this-month-on-playstation-march.jpg')] bg-cover bg-center h-[499px] w-full flex items-center px-6 md:px-16">
+            <div class="container mx-auto">
+                <h2 class="text-xl sm:text-2xl md:text-3xl xl:text-5xl text-white font-light">ESTE MARZO<br><span class="font-bold">EN PLAYSTATION</span></h2>
+                <p class="text-white text-xs sm:text-sm md:text-base mt-5">
+                    Echa un vistazo a los mejores lanzamientos de este mes junto a artículos especializados, guías y más.
+                </p>
+            </div>
+        </article>
+        <!-- PARTE INFERIOR -->
+        <article class="bg-[#26254f] w-full py-5 px-6 md:px-16">
+            <div class="container mx-auto">
+                <!-- CARDS -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+                    <!-- REQUIEM -->
+                    <div class="flex flex-col gap-3 rounded-xl p-3 border-2 border-transparent hover:border-white hover:bg-gray-900 cursor-pointer transition-transform duration-500 hover:-translate-y-3 hover:shadow-lg">
+                        <div class="overflow-hidden rounded-xl h-48 sm:h-56 md:h-64">
+                            <img class="w-full h-full object-cover" src="./assets/images/grace-1.jpeg" alt="grace-1">
+                        </div>
+                        <h3 class="text-white font-semibold text-sm sm:text-base md:text-lg">Nuevos lanzamientos</h3>
+                        <p class="text-gray-300 text-xs sm:text-sm md:text-base">Entérate de las últimas grandes novedades de este mes, como Resident Evil Requiem.</p>
+                    </div>
+                    <!-- MARATHON -->
+                    <div class="flex flex-col gap-3 rounded-xl p-3 border-2 border-transparent hover:border-white hover:bg-gray-900 cursor-pointer transition-transform duration-500 hover:-translate-y-3 hover:shadow-lg">
+                        <div class="overflow-hidden rounded-xl h-48 sm:h-56 md:h-64">
+                            <img class="w-full h-full object-cover" src="./assets/images/marathon-reapp-screen.jpg" alt="marathon-reapp-screen">
+                        </div>
+                        <h3 class="text-white font-semibold text-sm sm:text-base md:text-lg">PlayStation Indies</h3>
+                        <p class="text-gray-300 text-xs sm:text-sm md:text-base">Descubre los lanzamientos indies más emocionantes y únicos de este mes, como Marathon.</p>
+                    </div>
+                    <!-- COD -->
+                    <div class="flex flex-col gap-3 rounded-xl p-3 border-2 border-transparent hover:border-white hover:bg-gray-900 cursor-pointer transition-transform duration-500 hover:-translate-y-3 hover:shadow-lg">
+                        <div class="overflow-hidden rounded-xl h-48 sm:h-56 md:h-64">
+                            <img class="w-full h-full object-cover" src="./assets/images/COD-BLOPS-7-S2.jpg" alt="COD-BLOPS-7-S2">
+                        </div>
+                        <h3 class="text-white font-semibold text-sm sm:text-base md:text-lg">Últimas novedades</h3>
+                        <p class="text-gray-300 text-xs sm:text-sm md:text-base">Mantente al día de los mayores eventos del mes, incluida la Temporada 2 de Black Ops 7.</p>
+                    </div>
+                </div>
+
+                <!-- BOTÓN -->
+                <div class="flex justify-center mt-8 md:mt-12 mb-10">
+                    <div class="rounded-full border-2 border-transparent hover:border-white transition-all">
+                        <button class="m-px text-xs sm:text-sm md:text-base py-2 md:py-2.5 px-6 md:px-8 bg-white text-black rounded-full font-semibold cursor-pointer">
+                            Más información
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- STORE -->
+    <section class="py-20 w-full px-6 md:px-16">
+        <div class="container mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-14">
+
+            <!-- TEXT -->
+            <article class="flex flex-col gap-3 w-full lg:w-1/2 order-2 lg:order-1">
+                <div class="flex items-center gap-2">
+                    <img class="w-60" src="./assets/images/playStore.svg" alt="store">
+                    <span class="text-base font-semibold">PlayStation.Store</span>
+                </div>
+                <h2 class="text-3xl lg:text-4xl xl:text-5xl font-light">Nuevas ofertas en PlayStation Store</h2>
+                <p class="text-gray-500 text-sm lg:text-base max-w-sm">
+                    Explora los últimos descuentos y ofertas de temporada en juegos y contenido adicional geniales para PS5 y PS4.
+                </p>
+                <!-- BUTTON -->
+                <div class="w-fit rounded-full border-2 border-transparent hover:border-[#D53B00] transition-all">
+                    <button class="m-px text-sm lg:text-base py-2 lg:py-2.5 px-5 lg:px-6 bg-[#D53B00] text-white rounded-full font-bold transition-all">
+                        Ver todas las ofertas
+                    </button>
+                </div>
+            </article>
+
+            <!-- IMAGE -->
+            <article class="w-full lg:w-1/2 order-1 lg:order-2 cursor-pointer transition-transform duration-300 hover:scale-105">
+                <img class="w-full h-auto rounded-2xl object-cover" src="./assets/images/ps-store-evergreen.jpg" alt="store">
+            </article>
+        </div>
+    </section>
+
+    <!-- NOVEDADES -->
+    <section class="py-10 w-full px-6 md:px-16">
+        <div class="container mx-auto">
+            <h2 class="text-center text-2xl md:text-3xl xl:text-4xl font-light mb-8">Las últimas novedades de PlayStation Blog</h2>
+            <article class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+
+                <!-- NOVEDAD 1 -->
+                <div class="flex flex-col gap-3 rounded-xl border-2 border-transparent hover:border-[#0070cc] hover:shadow-lg cursor-pointer transition-all duration-300 p-3">
+                    <div class="overflow-hidden rounded-xl h-48 sm:h-52 md:h-60">
+                        <img class="w-full h-full object-cover" src="./assets/images/starfield.jpeg" alt="Starfield">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold">Starfield llegará a PlayStation 5 el 7 de abril</h3>
+                    <p class="text-gray-500 text-xs sm:text-sm">El 7 de abril, Starfield llegará a PlayStation 5, invitando a una comunidad nueva entera de exploradores en sus Sistemas Colonizados. Al mismo tiempo, la actualización más grande...</p>
+                    <footer class="flex items-center gap-3 mt-auto pt-3">
+                        <img class="w-10 h-10 rounded-full object-cover" src="./assets/images/user-3.jpeg" alt="user-3">
+                        <div class="flex flex-col">
+                            <p class="text-xs font-bold">Anne Lewis</p>
+                            <p class="text-xs text-gray-500">Senior Content Lead | Bethesda Softworks</p>
+                            <p class="text-xs text-gray-400">Mar 17, 2026</p>
+                        </div>
+                    </footer>
+                </div>
+
+                <!-- NOVEDAD 2 -->
+                <div class="flex flex-col gap-3 rounded-xl border-2 border-transparent hover:border-[#0070cc] hover:shadow-lg cursor-pointer transition-all duration-300 p-3">
+                    <div class="overflow-hidden rounded-xl h-48 sm:h-52 md:h-60">
+                        <img class="w-full h-full object-cover" src="./assets/images/grace-2.jpg" alt="grace-2">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold">Lo más descargado de PlayStation Store en Marzo de 2026</h3>
+                    <p class="text-gray-500 text-xs sm:text-sm">Ha llegado la hora de ver qué juegos de PS5, PS4, PS VR2, PS VR y free-to-play encabezaron las listas de descargas el mes pasado.</p>
+                    <footer class="flex items-center gap-3 mt-auto pt-3">
+                        <img class="w-10 h-10 rounded-full object-cover" src="./assets/images/user-2.jpg" alt="user-2">
+                        <div class="flex flex-col">
+                            <p class="text-xs font-bold">O' Dell Harmon Jr.</p>
+                            <p class="text-xs text-gray-500">Community Manager | PlayStation</p>
+                            <p class="text-xs text-gray-400">Mar 04, 2026</p>
+                        </div>
+                    </footer>
+                </div>
+
+                <!-- NOVEDAD 3 -->
+                <div class="flex flex-col gap-3 rounded-xl border-2 border-transparent hover:border-[#0070cc] hover:shadow-lg cursor-pointer transition-all duration-300 p-3">
+                    <div class="overflow-hidden rounded-xl h-48 sm:h-52 md:h-60">
+                        <img class="w-full h-full object-cover" src="./assets/images/silent-hill.jpeg" alt="Silent Hill">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold">Cómo los desarrolladores de Silent Hill f crearon un tenso combate solo de tipo cuerpo a cuerpo</h3>
+                    <p class="text-gray-500 text-xs sm:text-sm">Silent Hill f forma parte de una nueva generación para la mítica franquicia de terror, una en la que su ambientación etérea y escalofriante, extiende sus aterradoras...</p>
+                    <footer class="flex items-center gap-3 mt-auto pt-3">
+                        <img class="w-10 h-10 rounded-full object-cover" src="./assets/images/user-1.jpeg" alt="user-1">
+                        <div class="flex flex-col">
+                            <p class="text-xs font-bold">AL YANG</p>
+                            <p class="text-xs text-gray-500">Studio Creative Director en NeoBards</p>
+                            <p class="text-xs text-gray-400">Mar 12, 2026</p>
+                        </div>
+                    </footer>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- REDES -->
+    <section class="bg-[#f5f7fa] w-full">
+        <div class="container mx-auto px-6 md:px-16 py-10">
+            <h2 class="text-center text-2xl md:text-3xl font-light mb-8">Síguenos en las redes sociales</h2>
+            <article class="grid grid-cols-3 md:grid-cols-5 gap-4 md:gap-6 w-fit mx-auto">
+                <!-- TWITTER -->
+                <div>
+                    <img class="w-16 h-16 md:w-20 md:h-20 rounded-2xl object-cover cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-300" src="./assets/images/twitter.jpg" alt="Twitter">
+                </div>
+                <!-- FACEBOOK -->
+                <div>
+                    <img class="w-16 h-16 md:w-20 md:h-20 rounded-2xl object-cover cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-300" src="./assets/images/facebook.jpg" alt="Facebook">
+                </div>
+                <!-- INSTAGRAM -->
+                <div>
+                    <img class="w-16 h-16 md:w-20 md:h-20 rounded-2xl object-cover cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-300" src="./assets/images/instagram.jpg" alt="Instagram">
+                </div>
+                <!-- YOUTUBE -->
+                <div>
+                    <img class="w-16 h-16 md:w-20 md:h-20 rounded-2xl object-cover cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-300" src="./assets/images/youtube.jpg" alt="YouTube">
+                </div>
+                <!-- TWITCH -->
+                <div>
+                    <img class="w-16 h-16 md:w-20 md:h-20 rounded-2xl object-cover cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-300" src="./assets/images/twitch.jpg" alt="Twitch">
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#003791] text-white w-full">
+        <div class="container mx-auto px-6 md:px-16 py-8">
+
+            <!-- LOGO PS -->
+            <section class="mb-6 pb-6 border-b border-blue-400 flex items-center gap-3">
+                <img class="w-14 md:w-20 block" src="./assets/images/logo-sv.svg" alt="PlayStation logo">
+                <span class="text-3xl md:text-4xl font-semibold">PlayStation.</span>
+            </section>
+
+            <!-- NAV LINKS -->
+            <nav class="border-b border-blue-400 pb-6">
+
+                <!-- MENÚ-MOBILE -->
+                <section class="md:hidden flex flex-col">
+                    <!-- Acerca de -->
+                    <article class="border-b border-blue-400">
+                        <button class="w-full flex justify-between items-center py-4 font-bold text-sm cursor-pointer">
+                            Acerca de <span class="text-xl">+</span>
+                        </button>
+                    </article>
+
+                    <!-- Productos -->
+                    <article class="border-b border-blue-400">
+                        <button class="w-full flex justify-between items-center py-4 font-bold text-sm cursor-pointer">
+                            Productos <span class="text-xl">+</span>
+                        </button>
+                    </article>
+
+                    <!-- Valores -->
+                    <article class="border-b border-blue-400">
+                        <button class="w-full flex justify-between items-center py-4 font-bold text-sm cursor-pointer">
+                            Valores <span class="text-xl">+</span>
+                        </button>
+                    </article>
+
+                    <!-- Atención al cliente -->
+                    <article class="border-b border-blue-400">
+                        <button class="w-full flex justify-between items-center py-4 font-bold text-sm cursor-pointer">
+                            Atención al cliente <span class="text-xl">+</span>
+                        </button>
+                    </article>
+
+                    <!-- Recursos -->
+                    <article class="border-b border-blue-400">
+                        <button class="w-full flex justify-between items-center py-4 font-bold text-sm cursor-pointer">
+                            Recursos <span class="text-xl">+</span>
+                        </button>
+                    </article>
+
+                    <!-- Conectar -->
+                    <article class="border-b border-blue-400">
+                        <button class="w-full flex justify-between items-center py-4 font-bold text-sm cursor-pointer">
+                            Conectar <span class="text-xl">+</span>
+                        </button>
+                    </article>
+                </section>
+
+                <!-- MENÚ-DESKTOP -->
+                <section class="hidden md:grid md:grid-cols-3 xl:grid-cols-6 gap-5">
+
+                    <!-- Acerca de -->
+                    <article class="flex flex-col gap-2">
+                        <h3 class="font-bold text-sm mb-2">Acerca de</h3>
+                        <ul class="flex flex-col gap-2 text-sm">
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Sobre SIE</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Trabajos</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">PlayStation Studios</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">PlayStation Productions</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Empresa</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Historia de PlayStation</li>
+                        </ul>
+                    </article>
+
+                    <!-- Productos -->
+                    <article class="flex flex-col gap-2">
+                        <h3 class="font-bold text-sm mb-2">Productos</h3>
+                        <ul class="flex flex-col gap-2 text-sm">
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">PS5</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">PS4</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">PS VR2</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">PS Plus</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Accesorios</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Juegos</li>
+                        </ul>
+                    </article>
+
+                    <!-- Valores -->
+                    <article class="flex flex-col gap-2">
+                        <h3 class="font-bold text-sm mb-2">Valores</h3>
+                        <ul class="flex flex-col gap-2 text-sm">
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Medioambiente</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Accesibilidad</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Seguridad online</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Diversidad, equidad e inclusión.</li>
+                        </ul>
+                    </article>
+
+                    <!-- Atención al cliente -->
+                    <article class="flex flex-col gap-2">
+                        <h3 class="font-bold text-sm mb-2">Atención al cliente</h3>
+                        <ul class="flex flex-col gap-2 text-sm">
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Centro de atención al cliente</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Seguridad en PlayStation</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Estado</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Reparaciones de PlayStation</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Restablecer contraseña</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Solicitud de reembolso</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Manuales</li>
+                        </ul>
+                    </article>
+
+                    <!-- Recursos -->
+                    <article class="flex flex-col gap-2">
+                        <h3 class="font-bold text-sm mb-2">Recursos</h3>
+                        <ul class="flex flex-col gap-2 text-sm">
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Términos de servicio</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Política de cancelación de PS Store</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Clasificaciones por edad</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Aviso de salud</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Desarrolladores</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Programa de licencia oficial</li>
+                        </ul>
+                    </article>
+
+                    <!-- Conectar -->
+                    <article class="flex flex-col gap-2">
+                        <h3 class="font-bold text-sm mb-2">Conectar</h3>
+                        <div class="flex gap-3 mb-3">
+                            <i class="fa-brands fa-facebook text-2xl cursor-pointer hover:text-blue-300"></i>
+                            <i class="fa-brands fa-x-twitter text-2xl cursor-pointer hover:text-blue-300"></i>
+                            <i class="fa-brands fa-instagram text-2xl cursor-pointer hover:text-blue-300"></i>
+                            <i class="fa-brands fa-youtube text-2xl cursor-pointer hover:text-blue-300"></i>
+                        </div>
+                        <ul class="flex flex-col gap-2 text-sm">
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Aplicación PlayStation de iOS</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Aplicación PlayStation de Android</li>
+                            <li class="text-white cursor-pointer hover:text-blue-300 hover:underline">Beta Program at PlayStation</li>
+                        </ul>
+                    </article>
+
+                </section>
+            </nav>
+
+            <!-- SONY INTERACTIVE + COPYRIGHT -->
+            <section class="py-6 border-b border-blue-400">
+                <article class="flex items-center gap-4 mb-4">
+                    <img class="w-28 md:w-52" src="./assets/images/descarga.svg" alt="Sony Interactive Entertainment">
+                </article>
+                <p class="text-xs text-white">
+                    © 2026 Sony Interactive Entertainment Europe Limited (SIEE)<br>
+                    Todo el contenido, títulos de juegos, nombres comerciales y/o imágenes comerciales, marcas registradas, ilustraciones e imágenes asociadas son marcas registradas y/o materiales con derechos de autor de sus respectivos dueños. Todos los derechos reservados.
+                    <span class="underline cursor-pointer hover:text-blue-300">Más información</span>
+                </p>
+            </section>
+
+            <!-- REGIÓN LEGAL -->
+            <section class="flex flex-col md:flex-row md:justify-between md:items-center gap-4 pt-6">
+                <article class="flex items-center gap-2 text-sm cursor-pointer hover:text-blue-300">
+                    <i class="fa-solid fa-globe"></i>
+                    <span>España</span>
+                    <i class="fa-solid fa-angle-right text-xs"></i>
+                </article>
+                <ul class="flex flex-wrap gap-x-3 gap-y-1 text-xs text-white">
+                    <li class="cursor-pointer hover:text-blue-300 hover:underline">Información legal</li>
+                    <li class="text-blue-400">|</li>
+                    <li class="cursor-pointer hover:text-blue-300 hover:underline">Política de privacidad</li>
+                    <li class="text-blue-400">|</li>
+                    <li class="cursor-pointer hover:text-blue-300 hover:underline">Términos de uso de la web</li>
+                    <li class="text-blue-400">|</li>
+                    <li class="cursor-pointer hover:text-blue-300 hover:underline">Mapa de la web</li>
+                    <li class="text-blue-400">|</li>
+                    <li class="cursor-pointer hover:text-blue-300 hover:underline">Política de cookies</li>
+                    <li class="text-blue-400">|</li>
+                    <li class="cursor-pointer hover:text-blue-300 hover:underline">Términos de uso del Software</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- BARRA SONY -->
+        <section class="bg-black flex justify-end px-6 py-2 md:hidden">
+            <img class="w-14" src="./assets/images/sony.svg" alt="Sony">
+        </section>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>

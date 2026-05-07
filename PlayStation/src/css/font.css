@@ -1,0 +1,7 @@
+@font-face {
+    font-family: "fig";
+    src: url("./../assets/fonts/Figtree-Regular.ttf");
+}
+*{
+    font-family: "fig";
+}
