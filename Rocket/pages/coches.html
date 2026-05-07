@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rocket League | Coches</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <link rel="icon" type="image/x-icon" href="../assets/images/logo.jpg">
+</head>
+
+<body class="bg-dark text-white">
+
+  <!-- MENÚ -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-primary sticky-top shadow-sm">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold fs-4" href="../index.html">
+      <img src="../assets/images/logo.jpg" alt="Logo" width="32" height="32" class="rounded">
+      <span class="text-primary">ROCKET</span>
+      <span class="text-white">LEAGUE</span>
+    </a>
+    <!-- Menú hamburguesa -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navPrincipal"
+      aria-controls="navPrincipal" aria-expanded="false" aria-label="Abrir menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navPrincipal">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="../index.html">
+            <i class="bi bi-house-fill me-1"></i>Inicio
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active fw-semibold" aria-current="page" href="coches.html">
+            <i class="bi bi-car-front me-1"></i>Coches
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="modos.html">
+            <i class="bi bi-controller me-1"></i>Modos de Juego
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="contacto.html">
+            <i class="bi bi-envelope me-1"></i>Contacto
+          </a>
+        </li>
+      </ul>
+      <div class="d-flex gap-2">
+        <a href="contacto.html" class="btn btn-outline-primary btn-sm fw-semibold">
+          <i class="bi bi-person me-1"></i>Registro
+        </a>
+        <button class="btn btn-primary btn-sm fw-semibold" data-bs-toggle="modal" data-bs-target="#modalDescarga">
+          <i class="bi bi-play-fill me-1"></i>Jugar Gratis
+        </button>
+      </div>
+    </div>
+  </div>
+  </nav>
+
+
+  <!-- CABECERA -->
+  <header class="fondo-gradient py-5 border-bottom border-primary">
+    <div class="container text-center py-3">
+      <span class="badge bg-primary mb-3 px-3 py-2 fs-6">
+        <i class="bi bi-car-front me-1"></i>Catálogo Completo
+      </span>
+      <h1 class="display-4 fw-bold">Coches de Rocket League</h1>
+      <p class="lead text-secondary col-md-7 mx-auto">
+        Explora todos los vehículos, sus hitboxes, estadísticas y los favoritos de los profesionales.
+      </p>
+    </div>
+  </header>
+
+
+  <!-- ALERTAS -->
+  <div class="container mt-4">
+    <div class="alert alert-warning alert-dismissible fade show d-flex align-items-start gap-2" role="alert">
+      <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-1"></i>
+      <div>
+        <strong>¿Qué es el hitbox?</strong> La forma invisible que determina cómo el coche toca la
+        pelota. Coches con el mismo hitbox se comportan igual aunque tengan distinto aspecto.
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+    </div>
+
+    <!-- Botones de filtro  -->
+    <div class="d-flex flex-wrap gap-2 my-4 align-items-center">
+      <span class="fw-semibold me-2 text-secondary small">Filtrar por hitbox:</span>
+      <!-- Botón sólido -->
+      <button class="btn btn-primary btn-sm">
+        <i class="bi bi-grid me-1"></i>Todos
+      </button>
+      <!-- Botón outline -->
+      <button class="btn btn-outline-warning btn-sm">
+        <i class="bi bi-square me-1"></i>Octane
+      </button>
+      <!-- Botón distinto color -->
+      <button class="btn btn-outline-danger btn-sm">
+        <i class="bi bi-layout-text-window me-1"></i>Dominus
+      </button>
+      <!-- Botón con badge interno -->
+      <button class="btn btn-outline-info btn-sm">
+        Plank <span class="badge bg-info text-dark ms-1">2</span>
+      </button>
+      <!-- Botón con icono de ayuda -->
+      <button class="btn btn-outline-success btn-sm">
+        Breakout <i class="bi bi-question-circle ms-1"></i>
+      </button>
+      <!-- Botón deshabilitado -->
+      <button class="btn btn-secondary btn-sm" disabled>
+        <i class="bi bi-lock me-1"></i>Hybrid (bloqueado)
+      </button>
+    </div>
+  </div>
+
+  <!-- TARJETAS -->
+  <section class="container mb-5">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+
+      <!-- Octane -->
+      <div class="col">
+        <div class="card bg-black border border-primary text-white h-100 card-neon">
+          <div class="position-relative">
+            <img src="../assets/images/octane.webp" class="card-img-top img-card" alt="Octane">
+            <span class="badge bg-primary position-absolute top-0 start-0 m-2">Hitbox: Octane</span>
+            <span class="badge bg-success position-absolute top-0 end-0 m-2">Gratis</span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Octane <i class="bi bi-star-fill text-warning small"></i></h5>
+            <p class="card-text text-secondary small">El más equilibrado y popular. Referencia para aprender todas las
+              mecánicas.</p>
+          </div>
+          <div class="card-footer bg-black border-primary d-flex gap-2">
+            <button class="btn btn-primary btn-sm flex-fill" data-bs-toggle="modal" data-bs-target="#modalFichaOctane">
+              <i class="bi bi-eye me-1"></i>Ver Ficha
+            </button>
+            <button class="btn btn-outline-light btn-sm">
+              <i class="bi bi-arrow-left-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fennec -->
+      <div class="col">
+        <div class="card bg-black border border-warning text-white h-100 card-neon">
+          <div class="position-relative">
+            <img src="../assets/images/fennec.webp" class="card-img-top img-card" alt="Fennec">
+            <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-2">Hitbox: Fennec</span>
+            <span class="badge bg-danger position-absolute top-0 end-0 m-2">Pro Pick</span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Fennec</h5>
+            <p class="card-text text-secondary small">Mismo hitbox que el Octane pero con forma cuadrada. Favorito
+              absoluto de los pros.</p>
+          </div>
+          <div class="card-footer bg-black border-warning d-flex gap-2">
+            <button class="btn btn-warning btn-sm flex-fill text-dark fw-bold" data-bs-toggle="modal"
+              data-bs-target="#modalFichaFennec">
+              <i class="bi bi-eye me-1"></i>Ver Ficha
+            </button>
+            <button class="btn btn-outline-light btn-sm">
+              <i class="bi bi-arrow-left-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dominus -->
+      <div class="col">
+        <div class="card bg-black border border-danger text-white h-100 card-neon">
+          <div class="position-relative">
+            <img src="../assets/images/dominus.webp" class="card-img-top img-card" alt="Dominus">
+            <span class="badge bg-danger position-absolute top-0 start-0 m-2">Hitbox: Dominus</span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Dominus</h5>
+            <p class="card-text text-secondary small">Plano y largo. Potente en tiros de suelo y flicks. Curva de
+              aprendizaje más alta.</p>
+          </div>
+          <div class="card-footer bg-black border-danger d-flex gap-2">
+            <button class="btn btn-danger btn-sm flex-fill" data-bs-toggle="modal" data-bs-target="#modalFichaDominus">
+              <i class="bi bi-eye me-1"></i>Ver Ficha
+            </button>
+            <button class="btn btn-outline-light btn-sm">
+              <i class="bi bi-arrow-left-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Breakout -->
+      <div class="col">
+        <div class="card bg-black border border-success text-white h-100 card-neon">
+          <div class="position-relative">
+            <img src="../assets/images/Breakout.jpg" class="card-img-top img-card" alt="Breakout">
+            <span class="badge bg-success position-absolute top-0 start-0 m-2">Hitbox: Breakout</span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Breakout</h5>
+            <p class="card-text text-secondary small">El hitbox más bajo del juego. Excelente para dribbling y tiros
+              rasantes.</p>
+          </div>
+          <div class="card-footer bg-black border-success d-flex gap-2">
+            <button class="btn btn-success btn-sm flex-fill" data-bs-toggle="modal"
+              data-bs-target="#modalFichaBreakout">
+              <i class="bi bi-eye me-1"></i>Ver Ficha
+            </button>
+            <button class="btn btn-outline-light btn-sm">
+              <i class="bi bi-arrow-left-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Merc -->
+      <div class="col">
+        <div class="card bg-black border border-info text-white h-100 card-neon">
+          <div class="position-relative">
+            <img src="../assets/images/merc.webp" class="card-img-top img-card" alt="Merc">
+            <span class="badge bg-info text-dark position-absolute top-0 start-0 m-2">Hitbox: Merc</span>
+            <span class="badge bg-secondary position-absolute top-0 end-0 m-2">Clásico</span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Merc</h5>
+            <p class="card-text text-secondary small">El más alto y ancho. Buena masa para bloqueos pero complicado en
+              el aire.</p>
+          </div>
+          <div class="card-footer bg-black border-info d-flex gap-2">
+            <button class="btn btn-info btn-sm flex-fill text-dark fw-bold" data-bs-toggle="modal"
+              data-bs-target="#modalFichaMerc">
+              <i class="bi bi-eye me-1"></i>Ver Ficha
+            </button>
+            <button class="btn btn-outline-light btn-sm">
+              <i class="bi bi-arrow-left-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Batmobile DLC -->
+      <div class="col">
+        <div class="card bg-black border border-secondary text-white h-100 opacity-75">
+          <div class="position-relative">
+            <img src="../assets/images/batmob.jpg" class="card-img-top img-card" alt="Batmobile">
+            <span class="badge bg-dark border border-warning text-warning position-absolute top-0 start-0 m-2">
+              <i class="bi bi-lock-fill me-1"></i>DLC
+            </span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">
+              Batmobile <span class="badge bg-warning text-dark ms-1 small">Especial</span>
+            </h5>
+            <p class="card-text text-secondary small">Hitbox tipo Plank. Ultra largo y rasante. Devastador en manos
+              expertas.</p>
+          </div>
+          <div class="card-footer bg-black border-secondary">
+            <button class="btn btn-secondary btn-sm w-100" disabled>
+              <i class="bi bi-lock me-1"></i>Requiere DLC
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TABLA COMPARATIVA -->
+  <section class="container my-5">
+    <h2 class="text-center fw-bold mb-4 seccion-titulo">Comparativa de Hitboxes</h2>
+    <div class="table-responsive">
+      <table class="table table-dark table-striped table-hover table-bordered align-middle text-center">
+        <thead class="table-primary">
+          <tr>
+            <th>Hitbox</th>
+            <th>Longitud</th>
+            <th>Anchura</th>
+            <th>Altura</th>
+            <th>Coches ejemplo</th>
+            <th>Nivel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="badge bg-primary">Octane</span></td>
+            <td>118.0</td>
+            <td>84.2</td>
+            <td>36.2</td>
+            <td>Octane, Fennec, Takumi</td>
+            <td><span class="badge bg-success">Principiante</span></td>
+          </tr>
+          <tr>
+            <td><span class="badge bg-danger">Dominus</span></td>
+            <td>127.9</td>
+            <td>83.3</td>
+            <td>31.3</td>
+            <td>Dominus, Dominus GT</td>
+            <td><span class="badge bg-warning text-dark">Intermedio</span></td>
+          </tr>
+          <tr>
+            <td><span class="badge bg-success">Breakout</span></td>
+            <td>131.5</td>
+            <td>80.5</td>
+            <td>30.3</td>
+            <td>Breakout, Animus GP</td>
+            <td><span class="badge bg-warning text-dark">Intermedio</span></td>
+          </tr>
+          <tr>
+            <td><span class="badge bg-info text-dark">Merc</span></td>
+            <td>120.8</td>
+            <td>84.7</td>
+            <td>39.4</td>
+            <td>Merc</td>
+            <td><span class="badge bg-secondary">Poco usado</span></td>
+          </tr>
+          <tr>
+            <td><span class="badge bg-warning text-dark">Plank</span></td>
+            <td>128.8</td>
+            <td>84.7</td>
+            <td>29.4</td>
+            <td>Batmobile, X-Devil</td>
+            <td><span class="badge bg-danger">Avanzado</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- MODELO Octane -->
+  <div class="modal fade" id="modalFichaOctane" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-black border border-primary text-white">
+        <div class="modal-header border-primary">
+          <h5 class="modal-title fw-bold"><i class="bi bi-car-front text-primary me-2"></i>Octane — Ficha Completa</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-md-5">
+              <img src="../assets/images/octane.webp" class="img-fluid rounded border border-secondary w-100 img-modal"
+                alt="Octane">
+            </div>
+            <div class="col-md-7">
+              <h6 class="text-primary fw-bold mb-3">Estadísticas</h6>
+              <p class="mb-1 small">Control <span class="float-end text-primary fw-bold">95/100</span></p>
+              <div class="progress mb-2" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-primary w-100"></div>
+              </div>
+              <p class="mb-1 small">Velocidad <span class="float-end text-warning fw-bold">80/100</span></p>
+              <div class="progress mb-2" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-warning w-75"></div>
+              </div>
+              <p class="mb-1 small">Agilidad aérea <span class="float-end text-success fw-bold">90/100</span></p>
+              <div class="progress mb-3" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-success w-100"></div>
+              </div>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge bg-primary">Hitbox: Octane</span>
+                <span class="badge bg-success">Gratis</span>
+                <span class="badge bg-warning text-dark">Uso Pro: 55%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-secondary">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <a href="contacto.html" class="btn btn-primary">Recomendar a un amigo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODELO Fennec -->
+  <div class="modal fade" id="modalFichaFennec" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-black border border-warning text-white">
+        <div class="modal-header border-warning">
+          <h5 class="modal-title fw-bold">Fennec</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../assets/images/fennec.webp" class="img-fluid rounded mb-3 w-100 img-modal" alt="Fennec">
+          <p class="text-secondary small mb-0">Importado. Hitbox idéntico al Octane. ~30% de uso en torneos
+            profesionales.</p>
+        </div>
+        <div class="modal-footer border-secondary">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODELO Dominus -->
+  <div class="modal fade" id="modalFichaDominus" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-black border border-danger text-white">
+        <div class="modal-header border-danger">
+          <h5 class="modal-title fw-bold">Dominus</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../assets/images/dominus.webp" class="img-fluid rounded mb-3 w-100 img-modal" alt="Dominus">
+          <p class="text-secondary small mb-0">Hitbox largo y bajo. Especialista en tiros potentes de suelo.</p>
+        </div>
+        <div class="modal-footer border-secondary">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODELO Breakout -->
+  <div class="modal fade" id="modalFichaBreakout" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-black border border-success text-white">
+        <div class="modal-header border-success">
+          <h5 class="modal-title fw-bold">Breakout</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../assets/images/Breakout.jpg" class="img-fluid rounded mb-3 w-100 img-modal" alt="Breakout">
+          <p class="text-secondary small mb-0">El más bajo del juego. Excelente dribbling y tiros rasantes.</p>
+        </div>
+        <div class="modal-footer border-secondary">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODELO Merc -->
+  <div class="modal fade" id="modalFichaMerc" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-black border border-info text-white">
+        <div class="modal-header border-info">
+          <h5 class="modal-title fw-bold">Merc</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../assets/images/merc.webp" class="img-fluid rounded mb-3 w-100 img-modal" alt="Merc">
+          <p class="text-secondary small mb-0">El más alto del juego. Bueno para bloqueos defensivos.</p>
+        </div>
+        <div class="modal-footer border-secondary">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Descarga -->
+  <div class="modal fade" id="modalDescarga" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-black border border-primary text-white">
+        <div class="modal-header border-primary">
+          <h5 class="modal-title fw-bold"><i class="bi bi-download text-primary me-2"></i>Jugar Gratis</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+          <i class="bi bi-download display-1 text-primary mb-3 d-block"></i>
+          <div class="d-grid gap-2">
+            <a href="https://www.epicgames.com/store/product/rocket-league" target="_blank" class="btn btn-dark border border-secondary"><i class="bi bi-pc-display me-2"></i>Epic Games(PC)</a>
+            <a href="https://www.playstation.com/es-es/" target="_blank" class="btn btn-dark border border-secondary"><i
+                class="bi bi-playstation me-2"></i>PlayStation</a>
+            <a href="https://www.xbox.com/es-es/" target="_blank" class="btn btn-dark border border-secondary"><i class="bi bi-xbox me-2"></i>Xbox</a>
+          </div>
+        </div>
+        <div class="modal-footer border-secondary">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-black border-top border-secondary mt-5 py-4">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <h6 class="fw-bold text-primary mb-3"><i class="bi bi-car-front-fill me-2"></i>ROCKET LEAGUE FAN SITE</h6>
+          <p class="text-secondary small mb-0"> Página fan. Todos los derechos del juego pertenecen a Psyonix / Epic Games.</p>
+        </div>
+        <div class="col-md-4">
+          <h6 class="fw-bold text-white mb-3">Navegación</h6>
+          <ul class="list-unstyled mb-0">
+            <li><a href="../index.html" class="text-secondary text-decoration-none">Inicio</a></li>
+            <li><a href="coches.html" class="text-secondary text-decoration-none">Coches</a></li>
+            <li><a href="modos.html" class="text-secondary text-decoration-none">Modos de Juego</a></li>
+            <li><a href="contacto.html" class="text-secondary text-decoration-none">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="fw-bold text-white mb-3">Síguenos</h6>
+          <div class="d-flex gap-3 fs-4">
+            <a href="https://twitter.com/rocketleague" target="_blank" class="text-secondary"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.youtube.com/@rlesports" target="_blank" class="text-secondary"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.twitch.tv/rocketleague" target="_blank" class="text-secondary"><i class="bi bi-twitch"></i></a>
+            <a href="https://discord.gg/rocketleague" target="_blank" class="text-secondary"><i class="bi bi-discord"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary mt-4">
+      <p class="text-center text-secondary small mb-0">© 2026 Rocket League Fan Site</p>
+    </div>
+  </footer>
+
+  <script src="../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

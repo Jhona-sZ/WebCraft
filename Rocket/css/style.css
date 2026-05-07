@@ -1,0 +1,68 @@
+/* ── Fuente personalizada ────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Exo 2', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.navbar-brand,
+.display-1, .display-2, .display-3,
+.display-4, .display-5, .display-6 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* ── ALTURAS de imágenes (clases reutilizables) ───── */
+.img-carr {
+  height: 880px;
+  object-fit: cover;
+}
+
+.img-card {
+  height: 200px;
+  object-fit: cover;
+}
+
+.img-modal {
+  height: 180px;
+  object-fit: cover;
+}
+
+/* FONDO-GRADIENTE */
+.fondo-gradient {
+  background: linear-gradient(135deg, #0d0d1a 0%, #001f5b 60%, #003caa 100%);
+}
+
+/* CARD-NEON */
+.card-neon:hover {
+  box-shadow: 0 0 18px rgba(13, 110, 253, 0.55),
+              0 0 36px rgba(13, 110, 253, 0.18);
+  transition: box-shadow 0.3s ease;
+}
+
+/* ── COLOR: línea decorativa bajo títulos ────────── */
+.seccion-titulo::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #0d6efd;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* ── COLOR: subrayado activo en nav-link ─────────── */
+.navbar .nav-link.active {
+  border-bottom: 2px solid #0d6efd;
+}
+
+/* ── ANIMACIÓN*/
+.badge-live {
+  animation: live 1.6s infinite;
+}
+
+@keyframes live {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.15); }
+}
+

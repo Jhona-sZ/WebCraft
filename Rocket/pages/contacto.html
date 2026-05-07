@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rocket League | Contacto</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" type="image/x-icon" href="../assets/images/logo.jpg">
+</head>
+
+<body class="bg-dark text-white">
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║  NAVBAR                                  ║
+       ╚══════════════════════════════════════════╝ -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-primary sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold fs-4" href="../index.html">
+        <img src="../assets/images/logo.jpg" alt="Logo" width="32" height="32" class="rounded">
+        <span class="text-primary">ROCKET</span>
+        <span class="text-white">LEAGUE</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navPrincipal"
+        aria-controls="navPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navPrincipal">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="../index.html">
+              <i class="bi bi-house-fill me-1"></i>Inicio
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="coches.html">
+              <i class="bi bi-car-front me-1"></i>Coches
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="modos.html">
+              <i class="bi bi-controller me-1"></i>Modos de Juego
+            </a>
+          </li>
+          <!-- Contacto activo -->
+          <li class="nav-item">
+            <a class="nav-link active fw-semibold" aria-current="page" href="contacto.html">
+              <i class="bi bi-envelope me-1"></i>Contacto
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="bi bi-grid me-1"></i>Más
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li>
+                <h6 class="dropdown-header">Comunidad</h6>
+              </li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-trophy me-2 text-warning"></i>Rankings</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-people me-2 text-info"></i>Equipos</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li>
+                <h6 class="dropdown-header">Esports</h6>
+              </li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-camera-video me-2 text-danger"></i>Torneos</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-bar-chart me-2 text-success"></i>Estadísticas</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="d-flex gap-2">
+          <a href="contacto.html" class="btn btn-outline-primary btn-sm fw-semibold">
+            <i class="bi bi-person me-1"></i>Registro
+          </a>
+          <button class="btn btn-primary btn-sm fw-semibold" data-bs-toggle="modal" data-bs-target="#modalDescarga">
+            <i class="bi bi-play-fill me-1"></i>Jugar Gratis
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║  CABECERA HERO                           ║
+       ╚══════════════════════════════════════════╝ -->
+  <header class="hero-gradient py-5 border-bottom border-primary">
+    <div class="container text-center py-3">
+      <span class="badge bg-danger mb-3 px-3 py-2 fs-6">
+        <i class="bi bi-envelope me-1"></i>Contacto &amp; Registro
+      </span>
+      <h1 class="display-4 fw-bold">Únete a la Comunidad</h1>
+      <p class="lead text-secondary col-md-7 mx-auto">
+        Regístrate, participa en torneos y conecta con miles de jugadores de Rocket League.
+      </p>
+    </div>
+  </header>
+
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║  ALERT                                   ║
+       ╚══════════════════════════════════════════╝ -->
+  <div class="container mt-4">
+    <div class="alert alert-dark border border-primary d-flex align-items-center gap-2" role="alert">
+      <i class="bi bi-shield-lock text-primary flex-shrink-0 fs-5"></i>
+      <div class="small">
+        Tus datos están protegidos. Este sitio es un proyecto educativo y no almacena información real.
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║  FORMULARIO + INFO LATERAL               ║
+       ╚══════════════════════════════════════════╝ -->
+  <section class="container my-5">
+    <div class="row g-5 align-items-start">
+
+      <!-- ── COLUMNA FORMULARIO ── -->
+      <div class="col-lg-7">
+        <div class="card bg-black border border-primary text-white shadow-lg">
+          <div class="card-header bg-black border-primary py-3">
+            <h4 class="fw-bold mb-0">
+              <i class="bi bi-person-plus text-primary me-2"></i>Crear Cuenta
+            </h4>
+          </div>
+          <div class="card-body p-4">
+
+            <!-- Formulario — validación HTML5 nativa, sin JS propio -->
+            <form action="#" method="post">
+
+              <!-- Nombre y apellido -->
+              <div class="row g-3 mb-3">
+                <div class="col-sm-6">
+                  <label for="nombre" class="form-label fw-semibold">
+                    Nombre <span class="text-danger">*</span>
+                  </label>
+                  <input type="text" class="form-control bg-dark text-white border-secondary" id="nombre" name="nombre"
+                    placeholder="Tu nombre" required minlength="2">
+                </div>
+                <div class="col-sm-6">
+                  <label for="apellido" class="form-label fw-semibold">Apellido</label>
+                  <input type="text" class="form-control bg-dark text-white border-secondary" id="apellido"
+                    name="apellido" placeholder="Tu apellido">
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="mb-3">
+                <label for="email" class="form-label fw-semibold">
+                  Correo Electrónico <span class="text-danger">*</span>
+                </label>
+                <!-- Input group — docs: forms/input-group -->
+                <div class="input-group">
+                  <span class="input-group-text bg-dark text-primary border-secondary">
+                    <i class="bi bi-envelope"></i>
+                  </span>
+                  <input type="email" class="form-control bg-dark text-white border-secondary" id="email" name="email"
+                    placeholder="tu@correo.com" required>
+                </div>
+              </div>
+
+              <!-- Usuario -->
+              <div class="mb-3">
+                <label for="usuario" class="form-label fw-semibold">
+                  Nombre de Usuario <span class="text-danger">*</span>
+                </label>
+                <div class="input-group">
+                  <span class="input-group-text bg-dark text-warning border-secondary">@</span>
+                  <input type="text" class="form-control bg-dark text-white border-secondary" id="usuario"
+                    name="usuario" placeholder="Tu_ID_RL" required minlength="3" maxlength="20"
+                    pattern="[A-Za-z0-9_\-]+">
+                </div>
+                <div class="form-text text-secondary">Entre 3 y 20 caracteres. Letras, números, - y _</div>
+              </div>
+
+              <!-- Contraseña -->
+              <div class="mb-3">
+                <label for="password" class="form-label fw-semibold">
+                  Contraseña <span class="text-danger">*</span>
+                </label>
+                <div class="input-group">
+                  <span class="input-group-text bg-dark text-secondary border-secondary">
+                    <i class="bi bi-lock"></i>
+                  </span>
+                  <input type="password" class="form-control bg-dark text-white border-secondary" id="password"
+                    name="password" placeholder="Mínimo 8 caracteres" required minlength="8">
+                </div>
+              </div>
+
+              <!-- Plataforma — select docs: forms/select -->
+              <div class="mb-3">
+                <label for="plataforma" class="form-label fw-semibold">Plataforma principal</label>
+                <select class="form-select bg-dark text-white border-secondary" id="plataforma" name="plataforma">
+                  <option value="" selected disabled>Selecciona tu plataforma…</option>
+                  <option value="pc">PC — Epic Games Store</option>
+                  <option value="ps5">PlayStation 5</option>
+                  <option value="ps4">PlayStation 4</option>
+                  <option value="xbox">Xbox Series X/S</option>
+                  <option value="switch">Nintendo Switch</option>
+                </select>
+              </div>
+
+              <!-- Rango — radio buttons docs: forms/checks-radios -->
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Rango actual</label>
+                <div class="row g-2">
+                  <div class="col-6 col-md-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rango" id="rangoBronce" value="bronce" checked>
+                      <label class="form-check-label text-secondary" for="rangoBronce">
+                        <i class="bi bi-circle-fill text-warning me-1 small"></i>Bronce / Plata
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rango" id="rangoOro" value="oro">
+                      <label class="form-check-label text-secondary" for="rangoOro">
+                        <i class="bi bi-circle-fill text-warning me-1 small"></i>Oro
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rango" id="rangoPlatino" value="platino">
+                      <label class="form-check-label text-secondary" for="rangoPlatino">
+                        <i class="bi bi-circle-fill text-info me-1 small"></i>Platino
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rango" id="rangoDiamante" value="diamante">
+                      <label class="form-check-label text-secondary" for="rangoDiamante">
+                        <i class="bi bi-circle-fill text-primary me-1 small"></i>Diamante
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rango" id="rangoChamp" value="champion">
+                      <label class="form-check-label text-secondary" for="rangoChamp">
+                        <i class="bi bi-circle-fill text-danger me-1 small"></i>Champion+
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Intereses — form-switch docs: forms/checks-radios -->
+              <div class="mb-3">
+                <label class="form-label fw-semibold">¿Qué te interesa?</label>
+                <div class="row g-2">
+                  <div class="col-6">
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="chkTorneos" name="torneos" checked>
+                      <label class="form-check-label text-secondary" for="chkTorneos">Torneos</label>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="chkEntrenamiento" name="entrenamiento">
+                      <label class="form-check-label text-secondary" for="chkEntrenamiento">Entrenamiento</label>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="chkEsports" name="esports">
+                      <label class="form-check-label text-secondary" for="chkEsports">Esports / RLCS</label>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="chkComunidad" name="comunidad" checked>
+                      <label class="form-check-label text-secondary" for="chkComunidad">Comunidad</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Textarea -->
+              <div class="mb-3">
+                <label for="mensaje" class="form-label fw-semibold">
+                  Mensaje <span class="text-secondary small fw-normal">(opcional)</span>
+                </label>
+                <textarea class="form-control bg-dark text-white border-secondary" id="mensaje" name="mensaje" rows="3"
+                  maxlength="500" placeholder="Cuéntanos algo o pregunta lo que quieras…"></textarea>
+              </div>
+
+              <!-- Términos — checkbox -->
+              <div class="mb-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="terminos" name="terminos" required>
+                  <label class="form-check-label text-secondary" for="terminos">
+                    Acepto los
+                    <a href="#" class="text-primary" data-bs-toggle="modal" data-bs-target="#modalTerminos">
+                      términos y condiciones
+                    </a>
+                    <span class="text-danger">*</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- ── BOTONES: varios tipos de Bootstrap ── -->
+              <div class="d-flex flex-wrap gap-3">
+                <!-- Botón primario submit -->
+                <button type="submit" class="btn btn-primary fw-bold flex-fill">
+                  <i class="bi bi-person-check me-2"></i>Crear Cuenta
+                </button>
+                <!-- Botón outline reset -->
+                <button type="reset" class="btn btn-outline-secondary">
+                  <i class="bi bi-arrow-counterclockwise me-1"></i>Limpiar
+                </button>
+                <!-- Botón danger outline abre modal -->
+                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+                  data-bs-target="#modalCancelar">
+                  <i class="bi bi-x-circle me-1"></i>Cancelar
+                </button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- ── Fin columna formulario ── -->
+
+
+      <!-- ── COLUMNA INFO LATERAL ── -->
+      <div class="col-lg-5">
+
+        <!-- Tarjeta beneficios -->
+        <div class="card bg-black border border-success text-white mb-4">
+          <div class="card-header bg-black border-success">
+            <h5 class="fw-bold mb-0">
+              <i class="bi bi-stars text-success me-2"></i>¿Por qué registrarte?
+            </h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item bg-dark text-white border-secondary">
+              <i class="bi bi-check-circle text-success me-2"></i>Acceso a torneos exclusivos
+            </li>
+            <li class="list-group-item bg-dark text-white border-secondary">
+              <i class="bi bi-check-circle text-success me-2"></i>Sigue tu progreso y estadísticas
+            </li>
+            <li class="list-group-item bg-dark text-white border-secondary">
+              <i class="bi bi-check-circle text-success me-2"></i>Foro y chat de la comunidad
+            </li>
+            <li class="list-group-item bg-dark text-white border-secondary">
+              <i class="bi bi-check-circle text-success me-2"></i>Alertas de nuevas temporadas
+            </li>
+            <li class="list-group-item bg-dark text-white border-secondary">
+              <i class="bi bi-check-circle text-success me-2"></i>100% gratuito, sin anuncios
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tarjeta contacto con dropdown -->
+        <div class="card bg-black border border-info text-white mb-4">
+          <div class="card-header bg-black border-info">
+            <h5 class="fw-bold mb-0">
+              <i class="bi bi-headset text-info me-2"></i>Contacto Directo
+            </h5>
+          </div>
+          <div class="card-body">
+            <p class="text-secondary small mb-3">¿Prefieres contactar directamente?</p>
+            <!-- Desplegable de plataformas -->
+            <div class="dropdown mb-3">
+              <button class="btn btn-outline-info w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="bi bi-share me-2"></i>Contactar por…
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark w-100">
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                    <i class="bi bi-discord text-primary fs-5"></i>
+                    <div>
+                      <div class="fw-semibold">Discord</div>
+                      <small class="text-secondary">rocket-league-es</small>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                    <i class="bi bi-twitter-x fs-5"></i>
+                    <div>
+                      <div class="fw-semibold">Twitter / X</div>
+                      <small class="text-secondary">@RLFanSite_ES</small>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                    <i class="bi bi-reddit text-danger fs-5"></i>
+                    <div>
+                      <div class="fw-semibold">Reddit</div>
+                      <small class="text-secondary">r/RocketLeagueES</small>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                    <i class="bi bi-envelope text-warning fs-5"></i>
+                    <div>
+                      <div class="fw-semibold">Email</div>
+                      <small class="text-secondary">hola@rlfansite.es</small>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- Botones RRSS -->
+            <div class="d-flex gap-2">
+              <a href="#" class="btn btn-dark border border-secondary flex-fill">
+                <i class="bi bi-discord text-primary"></i>
+              </a>
+              <a href="#" class="btn btn-dark border border-secondary flex-fill">
+                <i class="bi bi-twitter-x"></i>
+              </a>
+              <a href="#" class="btn btn-dark border border-secondary flex-fill">
+                <i class="bi bi-youtube text-danger"></i>
+              </a>
+              <a href="#" class="btn btn-dark border border-secondary flex-fill">
+                <i class="bi bi-twitch text-primary"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ con accordion -->
+        <div class="card bg-black border border-warning text-white">
+          <div class="card-header bg-black border-warning">
+            <h5 class="fw-bold mb-0">
+              <i class="bi bi-question-circle text-warning me-2"></i>FAQ Rápida
+            </h5>
+          </div>
+          <div class="accordion accordion-flush" id="faqAccordion">
+            <div class="accordion-item bg-dark text-white">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq1" aria-expanded="false">
+                  ¿Es gratis el juego?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary small">
+                  Sí, Rocket League es completamente gratuito desde 2020 en Epic Games, PlayStation, Xbox y Switch.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-dark text-white">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq2" aria-expanded="false">
+                  ¿Hay cross-play?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary small">
+                  Sí, cross-play completo entre PC, PlayStation, Xbox y Nintendo Switch.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-dark text-white">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq3" aria-expanded="false">
+                  ¿Requisitos mínimos PC?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary small">
+                  CPU i5-2.5 GHz, GPU GTX 760, 8 GB RAM, 20 GB almacenamiento. Muy bien optimizado.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- ── Fin columna lateral ── -->
+
+    </div>
+  </section>
+
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║  MODALES                                 ║
+       ╚══════════════════════════════════════════╝ -->
+
+  <!-- Modal Términos -->
+  <div class="modal fade" id="modalTerminos" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content bg-black border border-secondary text-white">
+        <div class="modal-header border-secondary">
+          <h5 class="modal-title fw-bold">
+            <i class="bi bi-file-text text-primary me-2"></i>Términos y Condiciones
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="alert alert-warning py-2 small mb-3">
+            <i class="bi bi-info-circle me-2"></i>Proyecto educativo. No se almacenan datos reales.
+          </div>
+          <h6 class="text-primary fw-bold">1. Uso del sitio</h6>
+          <p class="text-secondary small">Proyecto educativo de demostración. No almacena datos personales reales ni
+            está afiliado a Psyonix o Epic Games.</p>
+          <h6 class="text-primary fw-bold mt-3">2. Propiedad intelectual</h6>
+          <p class="text-secondary small">Rocket League, sus personajes, imágenes y logotipos son propiedad de Psyonix /
+            Epic Games.</p>
+          <h6 class="text-primary fw-bold mt-3">3. Responsabilidad</h6>
+          <p class="text-secondary small mb-0">Contenido meramente informativo y fan-made.</p>
+        </div>
+        <div class="modal-footer border-secondary">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button class="btn btn-primary" data-bs-dismiss="modal">
+            <i class="bi bi-check-circle me-1"></i>Acepto los términos
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Cancelar -->
+  <div class="modal fade" id="modalCancelar" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content bg-black border border-danger text-white">
+        <div class="modal-header border-danger">
+          <h5 class="modal-title fw-bold">
+            <i class="bi bi-exclamation-triangle text-danger me-2"></i>¿Cancelar?
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-secondary small mb-0">Se perderán todos los datos introducidos. ¿Estás seguro?</p>
+        </div>
+        <div class="modal-footer border-secondary">
+          <button class="btn btn-secondary btn-sm" data-bs-dismiss="modal">No, volver</button>
+          <!-- Recarga la página para limpiar el form sin JS -->
+          <a href="contacto.html" class="btn btn-danger btn-sm">
+            <i class="bi bi-x-circle me-1"></i>Sí, cancelar
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Descarga -->
+  <div class="modal fade" id="modalDescarga" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-black border border-primary text-white">
+        <div class="modal-header border-primary">
+          <h5 class="modal-title fw-bold"><i class="bi bi-download text-primary me-2"></i>Jugar Gratis</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+          <i class="bi bi-download display-1 text-primary mb-3 d-block"></i>
+          <p class="text-secondary">Descarga Rocket League gratis en tu plataforma favorita.</p>
+          <div class="d-grid gap-2">
+            <a href="#" class="btn btn-dark border border-secondary"><i class="bi bi-pc-display me-2"></i>Epic Games
+              (PC)</a>
+            <a href="#" class="btn btn-dark border border-secondary"><i
+                class="bi bi-playstation me-2"></i>PlayStation</a>
+            <a href="#" class="btn btn-dark border border-secondary"><i class="bi bi-xbox me-2"></i>Xbox</a>
+            <a href="#" class="btn btn-dark border border-secondary"><i class="bi bi-nintendo-switch me-2"></i>Nintendo
+              Switch</a>
+          </div>
+        </div>
+        <div class="modal-footer border-secondary">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║  FOOTER                                  ║
+       ╚══════════════════════════════════════════╝ -->
+  <footer class="bg-black border-top border-secondary mt-5 py-4">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <h6 class="fw-bold text-primary mb-3"><i class="bi bi-car-front-fill me-2"></i>ROCKET LEAGUE FAN SITE</h6>
+          <p class="text-secondary small mb-0">Página fan no oficial. Todos los derechos pertenecen a Psyonix / Epic
+            Games.</p>
+        </div>
+        <div class="col-md-4">
+          <h6 class="fw-bold text-white mb-3">Navegación</h6>
+          <ul class="list-unstyled mb-0">
+            <li><a href="../index.html" class="text-secondary text-decoration-none">Inicio</a></li>
+            <li><a href="coches.html" class="text-secondary text-decoration-none">Coches</a></li>
+            <li><a href="modos.html" class="text-secondary text-decoration-none">Modos de Juego</a></li>
+            <li><a href="contacto.html" class="text-secondary text-decoration-none">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="fw-bold text-white mb-3">Síguenos</h6>
+          <div class="d-flex gap-3 fs-4">
+            <a href="#" class="text-secondary"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-secondary"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="text-secondary"><i class="bi bi-twitch"></i></a>
+            <a href="#" class="text-secondary"><i class="bi bi-discord"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary mt-4">
+      <p class="text-center text-secondary small mb-0">© 2026 Rocket League Fan Site · Proyecto educativo · No afiliado
+        a Psyonix</p>
+    </div>
+  </footer>
+
+  <script src="../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

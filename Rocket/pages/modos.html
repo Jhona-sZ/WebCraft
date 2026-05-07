@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rocket League | Modos de Juego</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" type="image/x-icon" href="../assets/images/logo.jpg">
+</head>
+
+<body class="bg-dark text-white">
+
+  <!-- MENÚ -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-primary sticky-top shadow-sm">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold fs-4" href="../index.html">
+        <img src="../assets/images/logo.jpg" alt="Logo" width="32" height="32" class="rounded">
+        <span class="text-primary">ROCKET</span>
+        <span class="text-white">LEAGUE</span>
+      </a>
+      <!-- Menú hamburguesa -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navPrincipal"
+        aria-controls="navPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navPrincipal">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="../index.html">
+              <i class="bi bi-house-fill me-1"></i>Inicio
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="coches.html">
+              <i class="bi bi-car-front me-1"></i>Coches
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active fw-semibold" aria-current="page" href="modos.html">
+              <i class="bi bi-controller me-1"></i>Modos de Juego
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="contacto.html">
+              <i class="bi bi-envelope me-1"></i>Contacto
+            </a>
+          </li>
+        </ul>
+        <div class="d-flex gap-2">
+          <a href="contacto.html" class="btn btn-outline-primary btn-sm fw-semibold">
+            <i class="bi bi-person me-1"></i>Registro
+          </a>
+          <button class="btn btn-primary btn-sm fw-semibold" data-bs-toggle="modal" data-bs-target="#modalDescarga">
+            <i class="bi bi-play-fill me-1"></i>Jugar Gratis
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- CABECERA -->
+  <header class="fondo-gradient py-5 border-bottom border-primary">
+    <div class="container text-center py-3">
+      <span class="badge bg-success mb-3 px-3 py-2 fs-6">
+        <i class="bi bi-controller me-1"></i>7 Modos Disponibles
+      </span>
+      <h1 class="display-4 fw-bold">Modos de Juego</h1>
+      <p class="text-secondary col-md-7 mx-auto">
+        De los clásicos 3v3 competitivos hasta los caóticos modos extra. Hay algo para cada jugador.
+      </p>
+    </div>
+  </header>
+
+
+  <!-- ALERTAS -->
+  <div class="container mt-4">
+    <div class="alert alert-success alert-dismissible fade show d-flex align-items-center gap-2" role="alert">
+      <i class="bi bi-stars flex-shrink-0 fs-5"></i>
+      <div>
+        <strong>¡Nuevo modo «Rumble Ranked» disponible!</strong>
+        Ítems especiales ahora en partidas clasificatorias.
+        <a href="#" class="alert-link">Leer más →</a>
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+    </div>
+  </div>
+
+
+  <!-- MODOS -->
+  <section class="container my-5">
+    <ul class="nav nav-tabs nav-fill mb-4" id="tabsModos" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active fw-semibold" id="tab-comp" data-bs-toggle="tab" data-bs-target="#contenido-comp"
+          type="button" role="tab" aria-controls="contenido-comp" aria-selected="true">
+          <i class="bi bi-trophy me-2 text-warning"></i>Competitivo
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link fw-semibold" id="tab-casual" data-bs-toggle="tab" data-bs-target="#contenido-casual"
+          type="button" role="tab" aria-controls="contenido-casual" aria-selected="false">
+          <i class="bi bi-emoji-smile me-2 text-info"></i>Casual
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link fw-semibold" id="tab-extra" data-bs-toggle="tab" data-bs-target="#contenido-extra"
+          type="button" role="tab" aria-controls="contenido-extra" aria-selected="false">
+          <i class="bi bi-lightning me-2 text-danger"></i>Modos Extra
+        </button>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="contenidoTabs">
+      <!-- Tab Competitivo -->
+      <div class="tab-pane fade show active" id="contenido-comp" role="tabpanel" aria-labelledby="tab-comp">
+        <div class="row g-4">
+          <!-- 1v1 Duelo -->
+          <div class="col-md-4">
+            <div class="card bg-black border border-warning text-white h-100 card-neon">
+              <img src="../assets/images/1v1.jpg" class="card-img-top img-card" alt="1v1 Duelo">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start">
+                  <h5 class="card-title fw-bold">1v1 — Duelo</h5>
+                  <span class="badge bg-warning text-dark">Solo</span>
+                </div>
+                <p class="card-text text-secondary small mt-2">
+                  El modo más puro. Un jugador contra otro. Mecánicas y decisiones al límite.
+                </p>
+              </div>
+              <div class="card-footer bg-black border-warning d-flex justify-content-between align-items-center">
+                <small class="text-secondary"><i class="bi bi-people me-1"></i>1 vs 1</small>
+                <button class="btn btn-warning btn-sm text-dark fw-bold" data-bs-toggle="modal"
+                  data-bs-target="#modal1v1">
+                  <i class="bi bi-info-circle me-1"></i>Detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2v2 Dobles -->
+          <div class="col-md-4">
+            <div class="card bg-black border border-primary text-white h-100 card-neon">
+              <img src="../assets/images/2v2.jpg" class="card-img-top img-card" alt="2v2 Dobles">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start">
+                  <h5 class="card-title fw-bold">2v2 — Dobles</h5>
+                  <span class="badge bg-primary">Dúo</span>
+                </div>
+                <p class="card-text text-secondary small mt-2">
+                  El favorito de muchos. Comunicación constante, rotaciones precisas y química entre dos.
+                </p>
+              </div>
+              <div class="card-footer bg-black border-primary d-flex justify-content-between align-items-center">
+                <small class="text-secondary"><i class="bi bi-people me-1"></i>2 vs 2</small>
+                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal2v2">
+                  <i class="bi bi-info-circle me-1"></i>Detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3v3 Estándar -->
+          <div class="col-md-4">
+            <div class="card bg-black border border-success text-white h-100 card-neon">
+              <img src="../assets/images/3v3.jpg" class="card-img-top img-card" alt="3v3 Estándar">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start">
+                  <h5 class="card-title fw-bold">3v3 — Estándar</h5>
+                  <span class="badge bg-success">Oficial RLCS</span>
+                </div>
+                <p class="card-text text-secondary small mt-2">
+                  El modo oficial competitivo. Tres coches por equipo. Rotaciones, velocidad y equipo.
+                </p>
+              </div>
+              <div class="card-footer bg-black border-success d-flex justify-content-between align-items-center">
+                <small class="text-secondary"><i class="bi bi-people me-1"></i>3 vs 3</small>
+                <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal3v3">
+                  <i class="bi bi-info-circle me-1"></i>Detalles
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab Casual -->
+      <div class="tab-pane fade" id="contenido-casual" role="tabpanel" aria-labelledby="tab-casual">
+        <div class="row g-4">
+          <!-- Casual 3v3 -->
+          <div class="col-md-6">
+            <div class="card bg-black border border-info text-white h-100 card-neon">
+              <img src="../assets/images/casual-3v3.png" class="card-img-top img-card" alt="Casual 3v3">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Casual 3v3</h5>
+                <p class="card-text text-secondary small">Sin presión de ranking. Perfecto para practicar mecánicas
+                  nuevas.</p>
+              </div>
+              <div class="card-footer bg-black border-info">
+                <span class="badge bg-info text-dark">
+                  <i class="bi bi-emoji-smile me-1"></i>Sin ranking
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- Entrenamiento Libre -->
+          <div class="col-md-6">
+            <div class="card bg-black border border-secondary text-white h-100">
+              <img src="../assets/images/entrena.png" class="card-img-top img-card" alt="Entrenamiento libre">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Entrenamiento Libre</h5>
+                <p class="card-text text-secondary small">Arena personal para practicar mecánicas sin oponentes.</p>
+              </div>
+              <div class="card-footer bg-black border-secondary">
+                <span class="badge bg-secondary">
+                  <i class="bi bi-bullseye me-1"></i>Sin oponentes
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab Modos Extra -->
+      <div class="tab-pane fade" id="contenido-extra" role="tabpanel" aria-labelledby="tab-extra">
+        <div class="row g-4">
+          <!-- Rumble  -->
+          <div class="col-md-4">
+            <div class="card bg-black border border-danger text-white h-100 card-neon">
+              <img src="../assets/images/rumble.jpg" class="card-img-top img-card" alt="Rumble">
+              <div class="card-body">
+                <h5 class="card-title fw-bold"><i class="bi bi-lightning-fill text-danger me-2"></i>Rumble</h5>
+                <p class="card-text text-secondary small">Ítems aleatorios: imán, tornado, resorte… Caos puro.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Dropshot -->
+          <div class="col-md-4">
+            <div class="card bg-black border border-warning text-white h-100 card-neon">
+              <img src="../assets/images/dropshot.jpg" class="card-img-top img-card" alt="Dropshot">
+              <div class="card-body">
+                <h5 class="card-title fw-bold"><i class="bi bi-hexagon-fill text-warning me-2"></i>Dropshot</h5>
+                <p class="card-text text-secondary small">Sin portería. La pelota electrificada destruye el suelo
+                  enemigo.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Hoops -->
+          <div class="col-md-4">
+            <div class="card bg-black border border-info text-white h-100 card-neon">
+              <img src="../assets/images/hoops.jpg" class="card-img-top img-card" alt="Hoops">
+              <div class="card-body">
+                <h5 class="card-title fw-bold"><i class="bi bi-circle text-info me-2"></i>Hoops</h5>
+                <p class="card-text text-secondary small">Baloncesto con coches. Mete la pelota en la canasta enemiga.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ARENAS -->
+  <section class="container my-5">
+    <h2 class="text-center fw-bold mb-4 seccion-titulo">Arenas Más Jugadas</h2>
+    <div class="row g-4">
+
+      <!-- DFH Stadium -->
+      <div class="col-md-4">
+        <div class="card bg-black border border-primary text-white h-100">
+          <img src="../assets/images/DFH_Stadium.jpg" class="card-img-top img-card" alt="DFH Stadium">
+          <div class="card-body">
+            <h5 class="fw-bold">DFH Stadium</h5>
+            <p class="text-secondary small">La arena más icónica y estándar. La más usada en esports.</p>
+          </div>
+          <div class="card-footer bg-black border-primary d-flex gap-2">
+            <button class="btn btn-primary btn-sm flex-fill" data-bs-toggle="modal" data-bs-target="#modalArena1">
+              <i class="bi bi-geo-alt me-1"></i>Ver Arena
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mannfield -->
+      <div class="col-md-4">
+        <div class="card bg-black border border-warning text-white h-100">
+          <img src="../assets/images/Mannfield.jpg" class="card-img-top img-card" alt="Mannfield">
+          <div class="card-body">
+            <h5 class="fw-bold">Mannfield</h5>
+            <p class="text-secondary small">Estadio clásico con fondo nocturno. Muy popular en la comunidad.</p>
+          </div>
+          <div class="card-footer bg-black border-warning d-flex gap-2">
+            <button class="btn btn-warning btn-sm flex-fill text-dark fw-bold" data-bs-toggle="modal"
+              data-bs-target="#modalArena2">
+              <i class="bi bi-geo-alt me-1"></i>Ver Arena
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wasteland -->
+      <div class="col-md-4">
+        <div class="card bg-black border border-danger text-white h-100">
+          <img src="../assets/images/wasteland.jpg" class="card-img-top img-card" alt="Wasteland">
+          <div class="card-body">
+            <h5 class="fw-bold">Wasteland</h5>
+            <p class="text-secondary small">Arena con bordes irregulares y diseño post-apocalíptico.</p>
+          </div>
+          <div class="card-footer bg-black border-danger d-flex gap-2">
+            <button class="btn btn-danger btn-sm flex-fill" data-bs-toggle="modal" data-bs-target="#modalArena3">
+              <i class="bi bi-geo-alt me-1"></i>Ver Arena
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- GUÍA RÁPIDA -->
+  <div class="container text-center my-4">
+    <button class="btn btn-outline-light btn-lg" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasGuia" aria-controls="offcanvasGuia">
+      <i class="bi bi-book me-2"></i>Abrir Guía Rápida de Mecánicas
+    </button>
+  </div>
+
+  <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasGuia"
+    aria-labelledby="offcanvasGuiaLabel">
+    <div class="offcanvas-header border-bottom border-secondary">
+      <h5 class="offcanvas-title fw-bold" id="offcanvasGuiaLabel">
+        <i class="bi bi-book-fill text-primary me-2"></i>Guía Rápida
+      </h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="list-group list-group-flush">
+        <div class="list-group-item bg-dark text-white border-secondary">
+          <h6 class="fw-bold text-primary mb-1"><i class="bi bi-1-circle me-2"></i>Boost</h6>
+          <p class="small text-secondary mb-0">Recoge las cápsulas del suelo. El boost grande da 100 puntos.</p>
+        </div>
+        <div class="list-group-item bg-dark text-white border-secondary">
+          <h6 class="fw-bold text-warning mb-1"><i class="bi bi-2-circle me-2"></i>Rotaciones</h6>
+          <p class="small text-secondary mb-0">Nunca persigáis los tres la pelota. Rota detrás de tus compañeros.</p>
+        </div>
+        <div class="list-group-item bg-dark text-white border-secondary">
+          <h6 class="fw-bold text-success mb-1"><i class="bi bi-3-circle me-2"></i>Aerial</h6>
+          <p class="small text-secondary mb-0">Salta, usa boost y controla el coche en el aire.</p>
+        </div>
+        <div class="list-group-item bg-dark text-white border-secondary">
+          <h6 class="fw-bold text-danger mb-1"><i class="bi bi-4-circle me-2"></i>Demos</h6>
+          <p class="small text-secondary mb-0">Impactar al rival a máxima velocidad lo elimina temporalmente.</p>
+        </div>
+      </div>
+      <div class="mt-4">
+        <a href="contacto.html" class="btn btn-primary w-100">
+          <i class="bi bi-question-circle me-2"></i>¿Tienes dudas? Contáctanos
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- MODAL 1V1 -->
+  <div class="modal fade" id="modal1v1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-black border border-warning text-white">
+        <div class="modal-header border-warning">
+          <h5 class="modal-title fw-bold"><i class="bi bi-person text-warning me-2"></i>1v1 Duelo</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../assets/images/1v1.jpg" class="img-fluid rounded mb-3 w-100 border border-secondary img-modal" alt="1v1">
+          <p class="text-secondary small">El modo más duro mentalmente. Solo puedes culparte a ti mismo.</p>
+          <div class="alert alert-warning py-2 small mb-0">
+            <i class="bi bi-lightbulb me-2"></i><strong>Consejo:</strong> El que controla la pelota, controla la
+            partida.
+          </div>
+        </div>
+        <div class="modal-footer border-secondary">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2V2 -->
+  <div class="modal fade" id="modal2v2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-black border border-primary text-white">
+        <div class="modal-header border-primary">
+          <h5 class="modal-title fw-bold"><i class="bi bi-people text-primary me-2"></i>2v2 Dobles</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../assets/images/2v2.jpg" class="img-fluid rounded mb-3 w-100 border border-secondary img-modal" alt="2v2">
+          <p class="text-secondary small mb-0">Equilibrio ideal entre individual y colectivo. Los mejores dúos tienen
+            rotaciones casi telepáticas.</p>
+        </div>
+        <div class="modal-footer border-secondary">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 3V3 -->
+  <div class="modal fade" id="modal3v3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-black border border-success text-white">
+        <div class="modal-header border-success">
+          <h5 class="modal-title fw-bold"><i class="bi bi-people-fill text-success me-2"></i>3v3 Estándar</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../assets/images/3v3.jpg" class="img-fluid rounded mb-3 w-100 border border-secondary img-modal" alt="3v3">
+          <p class="text-secondary small">El modo oficial de todos los torneos mundiales.</p>
+          <span class="badge bg-success"><i class="bi bi-trophy me-1"></i>Modo RLCS Oficial</span>
+        </div>
+        <div class="modal-footer border-secondary">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- MODAL DFH Stadium -->
+  <div class="modal fade" id="modalArena1" tabindex="-1" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-black border border-primary text-white">
+        <div class="modal-header border-primary">
+          <h5 class="modal-title fw-bold">DFH Stadium</h5><button type="button" class="btn-close btn-close-white"
+            data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body"><img src="../assets/images/DFH_Stadium.jpg" class="img-fluid rounded mb-3 w-100 img-modal" alt="DFH">
+          <p class="text-secondary small mb-0">Dimensiones estándar 8192 x 10240 UE. Referencia del juego competitivo.
+          </p>
+        </div>
+        <div class="modal-footer border-secondary"><button class="btn btn-secondary"
+            data-bs-dismiss="modal">Cerrar</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL Mannfield -->
+  <div class="modal fade" id="modalArena2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-black border border-warning text-white">
+        <div class="modal-header border-warning">
+          <h5 class="modal-title fw-bold">Mannfield</h5><button type="button" class="btn-close btn-close-white"
+            data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body"><img src="../assets/images/Mannfield.jpg" class="img-fluid rounded mb-3 w-100 img-modal"
+            alt="Mannfield">
+          <p class="text-secondary small mb-0">Mismas dimensiones que DFH con estética nocturna.</p>
+        </div>
+        <div class="modal-footer border-secondary"><button class="btn btn-secondary"
+            data-bs-dismiss="modal">Cerrar</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL Wasteland -->
+  <div class="modal fade" id="modalArena3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-black border border-danger text-white">
+        <div class="modal-header border-danger">
+          <h5 class="modal-title fw-bold">Wasteland</h5><button type="button" class="btn-close btn-close-white"
+            data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body"><img src="../assets/images/Wasteland.jpg" class="img-fluid rounded mb-3 w-100 img-modal"
+            alt="Wasteland">
+          <p class="text-secondary small mb-0">Bordes angulares e irregulares. Excluida de torneos oficiales.</p>
+        </div>
+        <div class="modal-footer border-secondary"><button class="btn btn-secondary"
+            data-bs-dismiss="modal">Cerrar</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL Jugar Gratis -->
+  <div class="modal fade" id="modalDescarga" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-black border border-primary text-white">
+        <div class="modal-header border-primary">
+          <h5 class="modal-title fw-bold"><i class="bi bi-download text-primary me-2"></i>Jugar Gratis</h5><button
+            type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+          <i class="bi bi-download display-1 text-primary mb-3 d-block"></i>
+          <div class="d-grid gap-2">
+            <a href="https://www.epicgames.com/store/product/rocket-league" target="_blank" class="btn btn-dark border border-secondary"><i class="bi bi-pc-display me-2"></i>Epic Games
+              (PC)</a>
+            <a href="https://www.playstation.com/" target="_blank" class="btn btn-dark border border-secondary"><i
+                class="bi bi-playstation me-2"></i>PlayStation</a>
+            <a href="https://www.xbox.com/" target="_blank" class="btn btn-dark border border-secondary"><i class="bi bi-xbox me-2"></i>Xbox</a>
+          </div>
+        </div>
+        <div class="modal-footer border-secondary"><button class="btn btn-secondary"
+            data-bs-dismiss="modal">Cerrar</button></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-black border-top border-secondary mt-5 py-4">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <h6 class="fw-bold text-primary mb-3"><i class="bi bi-car-front-fill me-2"></i>ROCKET LEAGUE FAN SITE</h6>
+          <p class="text-secondary small mb-0">Página fan. Todos los derechos pertenecen a Psyonix / Epic
+            Games.</p>
+        </div>
+        <div class="col-md-4">
+          <h6 class="fw-bold text-white mb-3">Navegación</h6>
+          <ul class="list-unstyled mb-0">
+            <li><a href="../index.html" class="text-secondary text-decoration-none">Inicio</a></li>
+            <li><a href="coches.html" class="text-secondary text-decoration-none">Coches</a></li>
+            <li><a href="modos.html" class="text-secondary text-decoration-none">Modos de Juego</a></li>
+            <li><a href="contacto.html" class="text-secondary text-decoration-none">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="fw-bold text-white mb-3">Síguenos</h6>
+          <div class="d-flex gap-3 fs-4">
+            <a href="https://twitter.com/rocketleague" target="_blank" class="text-secondary"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.youtube.com/@rlesports" target="_blank" class="text-secondary"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.twitch.tv/rocketleague" target="_blank" class="text-secondary"><i class="bi bi-twitch"></i></a>
+            <a href="https://discord.gg/rocketleague" target="_blank" class="text-secondary"><i class="bi bi-discord"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary mt-4">
+      <p class="text-center text-secondary small mb-0">© 2026 Rocket League Fan Site</p>
+    </div>
+  </footer>
+
+  <script src="../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
