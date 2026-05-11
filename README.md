@@ -5,6 +5,8 @@
 Bienvenido a **WebCraft**, mi espacio de experimentación frontend. Aquí recopilo diversos proyectos y landing pages desarrollados durante mi formación en el curso de **DAW**, enfocados en diseño responsivo, UI/UX y buenas prácticas de maquetación.
 
 ---
+## 🎯 Objetivo del proyecto
+WebCraft es un portfolio de práctica donde simulo la creación de interfaces reales inspiradas en videojuegos, plataformas y páginas modernas.
 
 ## 🚀 Proyectos Destacados
 
@@ -23,12 +25,12 @@ Landing page dedicada a la comunidad de Rocket League con estilos modernos.
 Diseño de portal de noticias con estructura limpia y organizada.
 
 ### ☀️ [SunWARD](https://jhona-sz.github.io/WebCraft/SunWARD/)
-Proyecto enfocado en [añade aquí una breve descripción rápida de qué trata este proyecto].
+Landing page de viajes de verano con enfoque en destinos turísticos, diseño visual atractivo y experiencia de usuario optimizada para inspiración vacacional.
 
 ---
 
 ## 🛠️ Tecnologías y Habilidades
-![HTML5]
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)
 
